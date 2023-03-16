@@ -459,7 +459,7 @@ local function ToggleFarmOre(state)
         local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3586.788330078125, -339.0176086425781, -511.5445861816406)})
+            {CFrame = CFrame.new(-3580.179443359375, -339.0193176269531, -513.0903930664062)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -469,13 +469,13 @@ local function ToggleFarmOre(state)
         wait(2)
         spawn(function()
             while FarmOreEnabled and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3564.10205078125, -339.5295104980469, -433.1968994140625)
+                HumanoidRootPart.CFrame = CFrame.new(-3568.652099609375, -339.5296936035156, -435.2101135253906)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3554.595703125, -339.5316162109375, -457.01055908203125)
+                HumanoidRootPart.CFrame = CFrame.new(-3557.9921875, -339.53167724609375, -458.1595764160156)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3574.056640625, -339.53973388671875, -551.10009765625)
+                HumanoidRootPart.CFrame = CFrame.new(-3574.17822265625, -339.539794921875, -551.9955444335938)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3557.61865234375, -339.54290771484375, -588.2284545898438)
+                HumanoidRootPart.CFrame = CFrame.new(-3558.1103515625, -339.30712890625, -588.9429931640625)
                 wait(3)
             end
         end)
@@ -507,7 +507,7 @@ local function ToggleFarmOre(state)
         local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3174.99755859375, 421.57598876953125, -617.8939819335938)})
+            {CFrame = CFrame.new(-3590.274169921875, -339.0164794921875, -513.1459350585938)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -517,19 +517,21 @@ local function ToggleFarmOre(state)
         wait(2)
         spawn(function()
             while FarmOreEnabled and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3176.04736328125, 421.5760498046875, -517.1177978515625)
+                HumanoidRootPart.CFrame = CFrame.new(-3647.266357421875, -339.53338623046875, -475.8580017089844)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3197.72900390625, 421.5760192871094, -656.130126953125)
+                HumanoidRootPart.CFrame = CFrame.new(-3642.197998046875, -339.5342712402344, -486.45965576171875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3645.6689453125, -339.53326416015625, -474.6554870605469)
+                HumanoidRootPart.CFrame = CFrame.new(-3652.566650390625, -339.5355529785156, -500.881103515625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3639.43017578125, -339.5345458984375, -489.3812255859375)
+                HumanoidRootPart.CFrame = CFrame.new(-3651.892333984375, -339.53900146484375, -540.942626953125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3650.954345703125, -339.5355529785156, -500.81671142578125)
+                HumanoidRootPart.CFrame = CFrame.new(-3659.215087890625, -339.54052734375, -558.1782836914062)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3648.5107421875, -339.5391845703125, -543.5593872070312)
+                HumanoidRootPart.CFrame = CFrame.new(-3576.99169921875, -339.54443359375, -605.329345703125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3655.399658203125, -339.54083251953125, -561.9934692382812)
+                HumanoidRootPart.CFrame = CFrame.new(-3590.7158203125, -339.5334777832031, -478.2925109863281)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3585.3935546875, -339.282958984375, -441.4742431640625)
                 wait(3)
             end
         end)
@@ -660,6 +662,87 @@ end)
 -------------------------------------------------  End Fram Ore  ------------------------------------------------
 
 
+-------------------------------------------------  Star Fram Artifac  ----------------------------------------------
+--------
+------
+-----
+----
+---
+--
+local FirstPage = MainUI.AddPage("Artifac")
+
+
+---Artifac
+
+local WindEnabled = true
+local WindButton = FirstPage.AddButton("Wind", function()
+    if WindEnabled then
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+        {CFrame = CFrame.new(-1042.0126953125, 2.8504037857055664, -380.09967041015625)})
+        Tw:Play()
+    end
+end)
+
+local FlameEnabled = true
+local FlameButton = FirstPage.AddButton("Flame", function()
+    if FlameEnabled then
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+        {CFrame = CFrame.new(-3313.639404296875, -119.70703125, -1299.7376708984375)})
+        Tw:Play()
+    end
+end)
+
+local IceEnabled = true
+local IceButton = FirstPage.AddButton("Ice", function()
+    if IceEnabled then
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+        {CFrame = CFrame.new(-3147.01416015625, -338.8221740722656, -1045.6251220703125)})
+        Tw:Play()
+    end
+end)
+
+local WaterEnabled = true
+local WaterButton = FirstPage.AddButton("Water", function()
+    if WaterEnabled then
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+        {CFrame = CFrame.new(-3147.01416015625, -338.8221740722656, -1045.6251220703125)})
+        Tw:Play()
+    end
+end)
+
+local LightEnabled = true
+local LightButton = FirstPage.AddButton("Light", function()
+    if LightEnabled then
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+        {CFrame = CFrame.new(-3482.395263671875, -338.5352783203125, -531.1058349609375)})
+        Tw:Play()
+    end
+end)
+
+localLightningEnabled = true
+local LightningButton = FirstPage.AddButton("Lightning", function()
+    if LightningEnabled then
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+        {CFrame = CFrame.new(-3185.41015625, 623.9497680664062, -659.719970703125)})
+        Tw:Play()
+    end
+end)
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Fram Artifac  ------------------------------------------------
+
+
 -------------------------------------------------  Star Fram Boss  ----------------------------------------------
 --------
 ------
@@ -738,6 +821,19 @@ end)
 --
 local FirstPage = MainUI.AddPage("Oter")
 
+
+local OffShakeEnabled = true
+local  OffShakeButton = FirstPage.AddButton("Off Shake Camera", function()
+    if OffShakeEnabled then
+        game:GetService("UserInputService").WindowFocused:connect(function()
+            game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Fixed}):Play()
+        end)
+    else
+        game:GetService("UserInputService").WindowFocused:connect(function()
+            game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Custom}):Play()
+        end)
+    end
+end)
 
 local RejoinEnabled = true
 local RejoinButton = FirstPage.AddButton("Rejoin", function()
