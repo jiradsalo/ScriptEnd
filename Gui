@@ -1,0 +1,85 @@
+local Library = {}
+
+function Library:CreateWindow(name)
+
+    local Design = Instance.new("ScreenGui")
+    local TopMain = Instance.new("Frame")
+    local Side = Instance.new("Frame")
+    local UIListLayout = Instance.new("UIListLayout")
+    local Container = Instance.new("Frame")
+    local UIListLayout_2 = Instance.new("UIListLayout")
+    local TextLabel = Instance.new("TextLabel")
+
+    UIListLayout_2.Parent = Container
+    UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+    
+    TextLabel.Name = "TextLabel"
+    TextLabel.Parent = Container
+    TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.BackgroundTransparency = 1.000
+    TextLabel.Position = UDim2.new(0.0973281562, 0, -0.178571433, 0)
+    TextLabel.Size = UDim2.new(0, 113, 0, 45)
+    TextLabel.Font = Enum.Font.ArialBold
+    TextLabel.Text = name
+    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.TextSize = 18.000
+
+    Design.Name = "Design"
+    Design.Parent = game.CoreGui
+    Design.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+    TopMain.Name = "TopMain"
+    TopMain.Parent = Design
+    TopMain.BackgroundColor3 = Color3.fromRGB(48, 41, 118)
+    TopMain.BorderSizePixel = 0
+    TopMain.Position = UDim2.new(0.467487872, 0, 0.268211931, 0)
+    TopMain.Size = UDim2.new(0, 317, 0, 252)
+    
+    Side.Name = "Side"
+    Side.Parent = TopMain
+    Side.BackgroundColor3 = Color3.fromRGB(43, 54, 77)
+    Side.BorderSizePixel = 0
+    Side.Position = UDim2.new(-0.370143533, 0, 0, 0)
+    Side.Size = UDim2.new(0, 118, 0, 252)
+    
+    UIListLayout.Parent = Side
+    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+    
+    Container.Name = "Container"
+    Container.Parent = TopMain
+    Container.BackgroundColor3 = Color3.fromRGB(31, 27, 89)
+    Container.BorderSizePixel = 0
+    Container.Position = UDim2.new(-0.370143563, 0, -0.178571433, 0)
+    Container.Size = UDim2.new(0, 434, 0, 45)
+
+    return {
+        Design = Design,
+        TopMain = TopMain,
+        Side = Side,
+        UIListLayout = UIListLayout,
+        Container = Container,
+    UIListLayout_2 = UIListLayout_2,
+    TextLabel = TextLabel
+}
+
+end
+
+local EpicLibrary = {}
+
+function EpicLibrary:CreateButton(text)
+    local TextButton = Instance.new("TextButton")
+    TextButton.Parent = Library.Container
+    TextButton.BackgroundColor3 = Color3.fromRGB(43, 54, 77)
+    TextButton.BorderSizePixel = 0
+    TextButton.Position = UDim2.new(-0.0423728824, 5, -0.0198412705, 5)
+    TextButton.Size = UDim2.new(0, 118, 0, 41)
+    TextButton.Font = Enum.Font.Unknown
+    TextButton.Text = text
+    TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextButton.TextSize = 15.000
+    TextButton.TextStrokeTransparency = 0.000
+    TextButton.TextWrapped = true
+    end
+
+Library.EpicLibrary = EpicLibrary
+return Library
