@@ -29,18 +29,24 @@ local Tab3 = Window:MakeTab({
 })
 --------------------------------------------
 local Tab4 = Window:MakeTab({
-	Name = "Farm Boss",
+	Name = "Farm Boss 1",
 	Icon = "rbxassetid://12836287616",
 	PremiumOnly = false
 })
 ---------------------------------------------
 local Tab5 = Window:MakeTab({
+	Name = "Farm Boss 2",
+	Icon = "rbxassetid://12836287616",
+	PremiumOnly = false
+	})
+---------------------------------------------
+local Tab6 = Window:MakeTab({
 	Name = "Tp Land",
 	Icon = "rbxassetid://12864414614",
 	PremiumOnly = false
 })
 -------------------------------------------------
-local Tab6 = Window:MakeTab({
+local Tab7 = Window:MakeTab({
 	Name = "Oter",
 	Icon = "rbxassetid://12836304245",
 	PremiumOnly = false
@@ -66,6 +72,23 @@ game:GetService("UserInputService").JumpRequest:connect(onJumpRequest)
 
 --------------------------------------------------------------------------------------------------------------------------------
 
+AntiAFK = false
+
+Tab1:AddToggle({
+    Name = "Anti AFK",
+    Default = false,
+        Callback = function(value)
+        AntiAFK = value
+        if AntiAFK then
+            wait(3)
+            local VirtualUser=game:service'VirtualUser'
+            game:service('Players').LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+            end)
+            end
+        end
+})
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
@@ -105,16 +128,6 @@ Tab1:AddTextbox({
     end
 })
 
-Tab1:AddButton({
-    Name = "Press Here!",
-    Callback = function()
-        if RuneArrows then
-            Tab1:GetObject("RuneArrows")
-            Tab1:GetObject("Speed")
-        end
-    end    
-})
-
 ------------------------------------------------------------------------------------------------------------------------------------
 
 AutoFish = false
@@ -134,69 +147,25 @@ Tab1:AddToggle({
     end
 })
 
+---------------------------------------------------------------------------------------------------------------------------------------
 
-HideName  = false
+
+Dash = false
 
 Tab1:AddToggle({
-    Name = "Hide Name",
+    Name = "Farm Speed",
     Default = false,
         Callback = function(value)
-        HideName = value
-        if HideName then
-for _,m in pairs(game:GetService("Workspace"):GetDescendants()) do
-if m.ClassName == "TextLabel" then 
-if m.Text == game:GetService("Players").LocalPlayer.Name then
-m:Destroy()
-for j,m in pairs(game:GetService("Players").LocalPlayer:GetDescendants()) do
-if m.ClassName == "TextLabel" then 
-if m.Text == game:GetService("Players").LocalPlayer.Name then
-m:Destroy()
-for h,v in pairs(workspace[game.Players.LocalPlayer.Name].Head:GetChildren()) do
-if v:IsA('BillboardGui') then
-v:Remove()
-end
-end
-end
-end
-end
-end
-end
-end
-
-while true do
-    for i,s in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-    if s:IsA("Accessory") then
-    s.Parent = workspace
-    end
-    end
-
-    for i,f in pairs(game.Workspace[game.Players.LocalPlayer.Name].Head:GetChildren()) do
-        if f:IsA("Decal") and f.Name == "face" then
-            f.Parent = nil
+        Dash = value
+        if Dash then
+                while Dash do
+                game:GetService("Players").LocalPlayer.PlayerGui.Parkour.Script.Dash:FireServer()
+                wait(0.5)
+            end
         end
     end
-
-    if game.Players.LocalPlayer.Character.Shirt then
-    game.Players.LocalPlayer.Character.Shirt:Remove()
-    else
-    end
-    if game.Players.LocalPlayer.Character.Pants then
-    game.Players.LocalPlayer.Character.Pants:Remove()
-    else
-    end
-    if game.Players.LocalPlayer.Character["Shirt Graphic"] then
-    game.Players.LocalPlayer.Character["Shirt Graphic"]:Remove()
-    else
-    end
-    if game.Players.LocalPlayer.Character.Torso.roblox then
-    game.Players.LocalPlayer.Character.Torso.roblox:Remove()
-    else
-    end
-    game:GetService("RunService").Stepped:wait()
-end
-end
-end
 })
+
 ------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -2408,7 +2377,17 @@ Tab4:AddToggle({
     end
 end
 })
--------------------------------------------------  Star Oter  ---------------------------------------------------
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End DualSwords farm  -----------------------------------------------------------
+
+
+-------------------------------------------------  Star Tp Land  -----------------------------------------------------------
 --------
 ------
 -----
@@ -2417,7 +2396,7 @@ end
 --
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
     local FirstCity = true
-    Tab5:AddToggle({
+    Tab6:AddToggle({
         Name = "First City",
         Default = false,
         Callback = function(value)
@@ -2443,7 +2422,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     local FloatingIsland = true
-    Tab5:AddToggle({
+    Tab6:AddToggle({
         Name = "Floating Island",
         Default = false,
         Callback = function(value)
@@ -2469,7 +2448,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     local Castle = true
-    Tab5:AddToggle({
+    Tab6:AddToggle({
         Name = "Castle",
         Default = false,
         Callback = function(value)
@@ -2495,7 +2474,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     local HighMountain = true
-    Tab5:AddToggle({
+    Tab6:AddToggle({
         Name = "High Mountain",
         Default = false,
         Callback = function(value)
@@ -2521,7 +2500,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     local Village = true
-    Tab5:AddToggle({
+    Tab6:AddToggle({
         Name = "Village",
         Default = false,
         Callback = function(value)
@@ -2547,7 +2526,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     local Forest = true
-    Tab5:AddToggle({
+    Tab6:AddToggle({
         Name = "Forest",
         Default = false,
         Callback = function(value)
@@ -2577,7 +2556,7 @@ end
 ------
 -------
 --------
--------------------------------------------------  End Oter  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------  End Tp Land  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 -------------------------------------------------  Star Oter  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2590,7 +2569,7 @@ end
 
 ---Off Shake Camera
 local OffShake = true
-Tab6:AddToggle({
+Tab7:AddToggle({
     Name = "Off Shake Camera",
     Default = false,
     Callback = function(value)
@@ -2607,7 +2586,7 @@ Tab6:AddToggle({
 })
 
 local Rejoin = true
-Tab6:AddButton({
+Tab7:AddButton({
     Name = "Rejoin",
     Callback = function(value)
         if Rejoin then
@@ -2619,7 +2598,7 @@ Tab6:AddButton({
 })
 ------------------------------------------------------------------------------------------------------------------
 local Shutdown = true
-Tab6:AddButton({
+Tab7:AddButton({
     Name = "Shutdown",
     Callback = function(value)
         if Shutdown then
@@ -2630,7 +2609,7 @@ Tab6:AddButton({
 
 
 local PickUp = false
-Tab6:AddToggle({
+Tab7:AddToggle({
     Name = "Pick Up",
     Default = false,
     Callback = function(value)
