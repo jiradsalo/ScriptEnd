@@ -909,27 +909,27 @@ local Section = Tab4:AddSection({
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-2938.394775390625, 48.940223693847656, -1075.271484375)})
             Tw:Play()
-            wait(5)
+            wait(15)
             
             local Tw1 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-701.3289184570312, 263.4222106933594, -497.8858337402344)})
             Tw1:Play()
-            wait(5)
+            wait(15)
             
             local Tw2 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(292.1370544433594, 19.368431091308594, -391.00445556640625)})
             Tw2:Play()
-            wait(5)
+            wait(15)
             
             local Tw3 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-715.0462646484375, 152.63833618164062, -1735.9384765625)})
             Tw3:Play()
-            wait(5)
+            wait(15)
             
             local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-741.6810913085938, 99.91461944580078, 416.1151123046875)})
             Tw4:Play()
-            wait(5)
+            wait(15)
         end
 end
 })
