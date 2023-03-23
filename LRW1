@@ -913,14 +913,15 @@ local Section = Tab4:AddSection({
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ---Boar King Level:40
 local MobName = "BoarMan"
+local BowAttack = true
+local Mon = true
 
-    local BoarManMob = true
     Tab4:AddToggle({
         Name = "Boar King Level:40",
         Default = false,
         Callback = function(value)
-            BoarManMob = value
-            if BoarManMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -934,21 +935,26 @@ local MobName = "BoarMan"
             Tw:Play()
             wait(5)
 
-                while BoarManMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while BoarManMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -959,14 +965,15 @@ end
 
 ---Golem Level:50
 local MobName = "Golem"
+local BowAttack = true
+local Mon = true
 
-    local GolemMob = true
     Tab4:AddToggle({
         Name = "Golem Level:50",
         Default = false,
         Callback = function(value)
-            GolemMob = value
-            if GolemMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -980,21 +987,26 @@ local MobName = "Golem"
             Tw:Play()
             wait(5)
                         
-                while GolemMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while GolemMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -1002,14 +1014,15 @@ end
 
 ---Elsa Level:75
 local MobName = "Elsa"
+local BowAttack = true
+local Mon = true
 
-    local ElsaMob = true
     Tab4:AddToggle({
         Name = "Elsa Level:75",
         Default = false,
         Callback = function(value)
-            ElsaMob = value
-            if ElsaMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1023,21 +1036,26 @@ local MobName = "Elsa"
             Tw:Play()
             wait(5)
             
-                while ElsaMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while ElsaMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -1045,14 +1063,15 @@ end
 
 ---Rouge Paladin Level:80
 local MobName = "RougePaladin"
+local BowAttack = true
+local Mon = true
 
-    local RougePaladinMob = true
     Tab4:AddToggle({
         Name = "Rouge Paladin Level:80",
         Default = false,
         Callback = function(value)
-            RougePaladinMob = value
-            if RougePaladinMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1066,21 +1085,26 @@ local MobName = "RougePaladin"
             Tw:Play()
             wait(5)
 
-                while RougePaladinMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while RougePaladinMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -1088,14 +1112,15 @@ end
 
 ---Ruined Knight Level:85
 local MobName = "RuinedKnight"
+local BowAttack = true
+local Mon = true
 
-local RuinedKnightMob = true
 Tab4:AddToggle({
     Name = "Ruined Knight Level:85",
     Default = false,
     Callback = function(value)
-        RuinedKnightMob = value
-        if RuinedKnightMob then
+        Mon = value
+        if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1109,21 +1134,26 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while RuinedKnightMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while RuinedKnightMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -1131,14 +1161,15 @@ end
 
 ---Hiyay Level:90
 local MobName = "Hiei"
+local BowAttack = true
+local Mon = true
 
-    local HieiMob = true
     Tab4:AddToggle({
         Name = "Hiyay Level:90",
         Default = false,
         Callback = function(value)
-            HieiMob = value
-            if HieiMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1152,35 +1183,41 @@ local MobName = "Hiei"
             Tw:Play()
             wait(5)
 
-                while HieiMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while HieiMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---Kaze Level:100
 local MobName = "Kaze"
+local BowAttack = true
+local Mon = true
 
-    local KazeMob = true
     Tab4:AddToggle({
         Name = "Kaze Level:100",
         Default = false,
         Callback = function(value)
-            KazeMob = value
-            if KazeMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1194,21 +1231,26 @@ local MobName = "Kaze"
             Tw:Play()
             wait(5)
 
-                while KazeMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while KazeMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -1216,14 +1258,15 @@ end
 
 ---Nodryre Level:100
 local MobName = "Nodryre"
+local BowAttack = true
+local Mon = true
 
-    local NodryreMob = true
     Tab4:AddToggle({
         Name = "Nodryre Level:100",
         Default = false,
         Callback = function(value)
-            NodryreMob = value
-            if NodryreMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1237,21 +1280,26 @@ local MobName = "Nodryre"
             Tw:Play()
             wait(5)
 
-                while NodryreMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while NodryreMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -1259,14 +1307,15 @@ end
 
 ---Flame Dragon Level:105
 local MobName = "Dragon"
+local BowAttack = true
+local Mon = true
 
-local DragonMon = true
 Tab4:AddToggle({
     Name = "Dragon Level:105",
     Default = false,
     Callback = function(value)
-        DragonMon = value
-        if DragonMon then
+        Mon = value
+        if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1280,21 +1329,30 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while BoarManMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
+
+                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
+
+                
+                
                 spawn(function()
-                    while BoarManMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait(1)
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -1302,14 +1360,15 @@ end
 
 ---MichKal Level:150
 local MobName = "Michkal"
+local BowAttack = true
+local Mon = true
 
-local MichkalMon = true
 Tab4:AddToggle({
     Name = "MichKal Level:150",
     Default = false,
     Callback = function(value)
-        MichkalMon = value
-        if MichkalMon then
+        Mon = value
+        if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1323,21 +1382,26 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while MichkalMon do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while MichkalMon do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
@@ -1345,14 +1409,15 @@ end
 
 ---Melioofus Level:200
 local MobName = "Melioofus"
+local BowAttack = true
+local Mon = true
 
-local MelioofusMon = true
 Tab4:AddToggle({
     Name = "Melioofus Level:200",
     Default = false,
     Callback = function(value)
-        MelioofusMon = value
-        if MelioofusMon then
+        Mon = value
+        if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1366,35 +1431,41 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while MelioofusMon do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while MelioofusMon do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 ---Legendary Super Level:200
 local MobName = "Legendary"
+local BowAttack = true
+local Mon = true
 
-local LegendaryMon = true
 Tab4:AddToggle({
     Name = "Legendary Level:200",
     Default = false,
     Callback = function(value)
-        LegendaryMon = value
-        if LegendaryMon then
+        Mon = value
+        if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1408,35 +1479,41 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while BoarManMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while BoarManMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 local MobName = "LegendarySuper"
+local BowAttack = true
+local Mon = true
 
-local LegendarySuperMon = true
 Tab4:AddToggle({
     Name = "Legendary Super Level:200",
     Default = false,
     Callback = function(value)
-        LegendarySuperMon = value
-        if LegendarySuperMon then
+        Mon = value
+        if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1450,35 +1527,41 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while BoarManMob do
-                for i,v in pairs(game.workspace:GetChildren()) do
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while BoarManMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 ---Kurito Level:333
 local MobName = "Kurito"
+local BowAttack = true
+local Mon = true
 
-local KuritoMon = true
 Tab4:AddToggle({
     Name = "Kurito Level:333",
     Default = false,
     Callback = function(value)
-        KuritoMon = value
-        if KuritoMon then
+        Mon = value
+        if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1492,38 +1575,41 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while KuritoMon do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while KuritoMon do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---Regulus Level:???
 local MobName = "Regulus"
-local loopConnection 
+local BowAttack = true
+local Mon = true
 
-
-local RegulusMob = true
 Tab4:AddToggle({
     Name = "Regulus Level:???",
     Default = false,
     Callback = function(value)
-        RegulusMob = value
-    
-        if RegulusMob then
+        Mon = value
+        if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1537,21 +1623,26 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
                         
-                while RegulusMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while RegulusMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 -----------------------------------------------------------------------------------------------------------------
@@ -2343,38 +2434,43 @@ end
 
 ---DualSwords Regulus Level:???
 local MobName = "Regulus"
-local RegulusMob = false
+local BowAttack = false
+local Mon = false
 
 Tab4:AddToggle({
     Name = "Regulus Level:???",
     Default = false,
     Callback = function(value)
-        RegulusMob = value
+        Mon = value
     
-        if RegulusMob then
+        if Mon then
 
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
             local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
     
-            while RegulusMob do
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
                     wait(1)
+                end
+                end
+                end
                             
                 spawn(function()
-                    while RegulusMob do
+                    while BowAttack do
                     char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
+                wait(0.1)
             end
-        end
-        wait()
+        end)
+        wait(5)
+        BowAttack = false
+        wait(5)
+        BowAttack = true
     end
-    end
+    Mon = false
 end
 })
 --
@@ -2606,35 +2702,6 @@ Tab7:AddButton({
         end
     end
 })
-
-
-local PickUp = false
-Tab7:AddToggle({
-    Name = "Pick Up",
-    Default = false,
-    Callback = function(value)
-        if value ~= PickUp then
-            PickUp = value
-        if PickUp then
-        
-                    local ReplicatedStorage = game:GetService("ReplicatedStorage")
-            local Events = ReplicatedStorage.Events
-            local Players = game:GetService("Players")
-            
-            for i, v in pairs(workspace:GetChildren()) do
-                Events.Pickup:FireServer(v)
-            end
-            
-            workspace.ChildAdded:Connect(function(c)
-                Events.Pickup:FireServer(c)
-            end)
-        end
-    end
-end
-})
-
-
-
 
 --
 ---
