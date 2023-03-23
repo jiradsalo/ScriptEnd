@@ -210,7 +210,7 @@ Tab2:AddToggle({Name = "Bronz Ore",Default = false,Callback = function(value)
                 _G.loop = true
                 while _G.loop do
                     wait()
-                    workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+                    game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
                     wait(0.1)
                 end
             end)
@@ -255,7 +255,7 @@ Tab2:AddToggle({Name = "Iron Ore",Default = false,Callback = function(value)
         _G.loop = true
         while _G.loop do
             wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
     end)
@@ -300,7 +300,7 @@ local Toggle = Tab2:AddToggle({Name = "Black Ore",Default = false,Callback = fun
         _G.loop = true
         while _G.loop do
             wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
     end)
@@ -333,29 +333,29 @@ Tab2:AddToggle({Name = "Adamant Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-323.2315368652344, 215.12989807128906, -325.2505187988281)
+                HumanoidRootPart.CFrame = CFrame.new(-3106.1630859375, 85.29292297363281, -1316.1104736328125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-357.7621765136719, 211.62454223632812, -330.6028137207031)
+                HumanoidRootPart.CFrame = CFrame.new(-3134.091796875, 85.29292297363281, -1305.6103515625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-388.9416809082031, 138.69898986816406, -348.00640869140625)
+                HumanoidRootPart.CFrame = CFrame.new(-3187.031982421875, 85.29292297363281, -1305.5703125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-364.9562072753906, 139.77557373046875, -356.0691833496094)
+                HumanoidRootPart.CFrame = CFrame.new(-3110.46826171875, 85.49807739257812, -1185.5902099609375)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-329.61181640625, 186.61749267578125, -438.783203125)
+                HumanoidRootPart.CFrame = CFrame.new(-3125.274658203125, 85.29292297363281, -1199.0701904296875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-353.9990234375, 139.25396728515625, -426.3603820800781)
+                HumanoidRootPart.CFrame = CFrame.new(-3183.752197265625, 85.29292297363281, -1207.04443359375)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-359.7435302734375, 91.71295166015625, -404.89422607421875)
+                HumanoidRootPart.CFrame = CFrame.new(-3246.542236328125, 183.949951171875, -674.6106567382812)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-382.0102844238281, 93.61717987060547, -382.24127197265625)
+                HumanoidRootPart.CFrame = CFrame.new(-3254.12841796875, 183.949951171875, -674.9178466796875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-330.2598571777344, 73.3270034790039, -368.77886962890625)
+                HumanoidRootPart.CFrame = CFrame.new(-3249.0263671875, 183.949951171875, -667.6703491210938)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-277.2997741699219, 25.283782958984375, -383.6387939453125)
+                HumanoidRootPart.CFrame = CFrame.new(-3260.558349609375, 221.949951171875, -518.5996704101562)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-276.8822937011719, 25.25397300720215, -401.30511474609375)
+                HumanoidRootPart.CFrame = CFrame.new(-3247.259033203125, 221.949951171875, -518.2675170898438)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-278.0777893066406, 25.586421966552734, -353.7747802734375)
+                HumanoidRootPart.CFrame = CFrame.new(-3250.845458984375, 221.949951171875, -504.1876220703125)
                 wait(3)
             end
         end)
@@ -363,7 +363,7 @@ Tab2:AddToggle({Name = "Adamant Ore",Default = false,Callback = function(value)
         _G.loop = true
         while _G.loop do
             wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
     end)
@@ -386,7 +386,7 @@ Tab2:AddToggle({Name = "White Stone",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-73.67989349365234, 38.92112350463867, 439.0084228515625)})
+            {CFrame = CFrame.new(-3099.234130859375, 85.29292297363281, -1198.850341796875)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -396,25 +396,43 @@ Tab2:AddToggle({Name = "White Stone",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-48.14177703857422, 39.927433013916016, 427.38494873046875)
+                HumanoidRootPart.CFrame = CFrame.new(-3169.458251953125, 85.29292297363281, -1301.1630859375)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-60.88756561279297, 38.47229766845703, 467.91827392578125)
+                HumanoidRootPart.CFrame = CFrame.new(-3207.85205078125, 85.29292297363281, -1301.4783935546875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-107.09483337402344, 38.9805908203125, 436.5368957519531)
+                HumanoidRootPart.CFrame = CFrame.new(-3164.994384765625, 85.42533874511719, -1240.3233642578125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-93.56780242919922, 38.93349075317383, 504.47705078125)
+                HumanoidRootPart.CFrame = CFrame.new(-3153.42919921875, 85.45793151855469, -1226.7359619140625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-173.08079528808594, 39.88550567626953, 482.0437927246094)
+                HumanoidRootPart.CFrame = CFrame.new(-3102.98876953125, 85.29292297363281, -1216.4932861328125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-197.53094482421875, 38.740509033203125, 526.1314086914062)
+                HumanoidRootPart.CFrame = CFrame.new(-3183.752197265625, 85.29292297363281, -1207.04443359375)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-281.2102966308594, 39.188655853271484, 555.6700439453125)
+                HumanoidRootPart.CFrame = CFrame.new(-3428.756103515625, 183.949951171875, -653.6953125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-347.0690002441406, 39.249778747558594, 604.2981567382812)
+                HumanoidRootPart.CFrame = CFrame.new(-3411.089111328125, 184.13104248046875, -610.7214965820312)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-402.4089050292969, 39.605194091796875, 631.8221435546875)
+                HumanoidRootPart.CFrame = CFrame.new(-3395.1748046875, 183.94996643066406, -606.2634887695312)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-415.32989501953125, 39.185997009277344, 668.62646484375)
+                HumanoidRootPart.CFrame = CFrame.new(-3306.18798828125, 222.08462524414062, -472.84210205078125)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3155.642578125, 421.57598876953125, -451.5522155761719)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3194.03369140625, 421.57598876953125, -497.2698059082031)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3158.49755859375, 421.5759582519531, -562.2720947265625)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3195.85107421875, 421.5760498046875, -581.1619873046875)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3156.64697265625, 421.57598876953125, -608.5779418945312)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3183.817626953125, 421.70721435546875, -634.266845703125)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3163.494140625, 421.57598876953125, -663.3062133789062)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3203.003662109375, 421.5760498046875, -677.78759765625)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3197.263916015625, 421.5760498046875, -746.1566162109375)
                 wait(3)
             end
         end)
@@ -422,7 +440,7 @@ Tab2:AddToggle({Name = "White Stone",Default = false,Callback = function(value)
         _G.loop = true
         while _G.loop do
             wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
     end)
@@ -445,7 +463,7 @@ Tab2:AddToggle({Name = "Rune Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(14.063032150268555, 36.4774169921875, 843.5938110351562)})
+            {CFrame = CFrame.new(-3308.418701171875, 176.96286010742188, -810.0545043945312)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -455,21 +473,29 @@ Tab2:AddToggle({Name = "Rune Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(83.0316390991211, 35.80947494506836, 823.872802734375)
+                HumanoidRootPart.CFrame = CFrame.new(-3281.46923828125, 184.16616821289062, -739.4168090820312)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(6.27511739730835, 36.03696060180664, 819.2109375)
+                HumanoidRootPart.CFrame = CFrame.new(-3257.8935546875, 184.0855255126953, -737.4698486328125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-27.285198211669922, 36.563724517822266, 857.5549926757812)
+                HumanoidRootPart.CFrame = CFrame.new(-3267.503173828125, 183.949951171875, -724.87353515625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-117.24994659423828, 36.58548355102539, 901.63427734375)
+                HumanoidRootPart.CFrame = CFrame.new(-3266.439453125, 183.949951171875, -600.0185546875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-170.23011779785156, 36.42265319824219, 912.4634399414062)
+                HumanoidRootPart.CFrame = CFrame.new(-3256.823974609375, 184.20738220214844, -588.3638916015625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-251.35464477539062, 36.51677703857422, 939.0205078125)
+                HumanoidRootPart.CFrame = CFrame.new(-3294.50390625, 183.949951171875, -598.29931640625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-309.4927978515625, 36.48179626464844, 938.00146484375)
+                HumanoidRootPart.CFrame = CFrame.new(-3248.90869140625, 221.949951171875, -444.7603454589844)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-327.9899597167969, 36.10892105102539, 912.0517578125)
+                HumanoidRootPart.CFrame = CFrame.new(-3257.899169921875, 221.949951171875, -431.21917724609375)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3340.188232421875, 221.949951171875, -475.8669128417969)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3430.7080078125, 221.949951171875, -451.6587219238281)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3418.03759765625, 222.0907440185547, -441.7541198730469)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3406.74365234375, 221.949951171875, -427.1356506347656)
                 wait(3)
             end
         end)
@@ -477,7 +503,7 @@ Tab2:AddToggle({Name = "Rune Ore",Default = false,Callback = function(value)
         _G.loop = true
         while _G.loop do
             wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
     end)
@@ -500,7 +526,7 @@ Tab2:AddToggle({Name = "Gold Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(3971.463623046875, -738.989990234375, 5726.396484375)})
+            {CFrame = CFrame.new(-3580.179443359375, -339.0193176269531, -513.0903930664062)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -510,11 +536,13 @@ Tab2:AddToggle({Name = "Gold Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(3961.483642578125, -738.7094116210938, 5715.08251953125)
+                HumanoidRootPart.CFrame = CFrame.new(-3568.652099609375, -339.5296936035156, -435.2101135253906)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(3966.4873046875, -738.8134155273438, 5740.66015625)
+                HumanoidRootPart.CFrame = CFrame.new(-3557.9921875, -339.53167724609375, -458.1595764160156)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(3986.64208984375, -738.9859008789062, 5738.716796875)
+                HumanoidRootPart.CFrame = CFrame.new(-3574.17822265625, -339.539794921875, -551.9955444335938)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3558.1103515625, -339.30712890625, -588.9429931640625)
                 wait(3)
             end
         end)
@@ -522,7 +550,62 @@ Tab2:AddToggle({Name = "Gold Ore",Default = false,Callback = function(value)
         _G.loop = true
         while _G.loop do
             wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
+            wait(0.1)
+        end
+    end)
+else
+
+    _G.loop = false
+    TweenRunning = true
+end
+end
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+--- Drangon Stone
+Tab2:AddToggle({Name = "Drangon Stone",Default = false,Callback = function(value)
+    Drangon = value
+        if value then
+            local TweenService = game:GetService("TweenService")
+            local Character = game.Players.LocalPlayer.Character
+            local HumanoidRootPart = Character.HumanoidRootPart
+        
+        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+            {CFrame = CFrame.new(-3590.274169921875, -339.0164794921875, -513.1459350585938)})
+        Tween1:Play()
+        Tween1.Completed:Connect(function()
+            TweenRunning = false
+        end)
+
+        Tween1.Completed:Connect(function()
+        wait(2)
+        spawn(function()
+            while value and not TweenRunning do
+                HumanoidRootPart.CFrame = CFrame.new(-3647.266357421875, -339.53338623046875, -475.8580017089844)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3642.197998046875, -339.5342712402344, -486.45965576171875)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3652.566650390625, -339.5355529785156, -500.881103515625)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3651.892333984375, -339.53900146484375, -540.942626953125)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3659.215087890625, -339.54052734375, -558.1782836914062)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3576.99169921875, -339.54443359375, -605.329345703125)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3590.7158203125, -339.5334777832031, -478.2925109863281)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3585.3935546875, -339.282958984375, -441.4742431640625)
+                wait(3)
+            end
+        end)
+        
+        _G.loop = true
+        while _G.loop do
+            wait()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
     end)
@@ -545,7 +628,7 @@ Tab2:AddToggle({Name = "Crystal Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(3715.854248046875, -762.5397338867188, 5414.5048828125)})
+            {CFrame = CFrame.new(-3174.155029296875, 421.57598876953125, -532.0110473632812)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -555,11 +638,13 @@ Tab2:AddToggle({Name = "Crystal Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(3719.67822265625, -758.4064331054688, 5395.94287109375)
+                HumanoidRootPart.CFrame = CFrame.new(-3181.39453125, 421.57598876953125, -562.011474609375)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(3740.753173828125, -758.5902099609375, 5410.7490234375)
+                HumanoidRootPart.CFrame = CFrame.new(-3509.86328125, 438.9498596191406, -676.9973754882812)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(3691.589111328125, -758.2308959960938, 5416.4541015625)
+                HumanoidRootPart.CFrame = CFrame.new(-3239.185546875, 376.0263671875, -1150.364501953125)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3236.302978515625, 260.0061950683594, -1423.3037109375)
                 wait(3)
             end
         end)
@@ -567,7 +652,7 @@ Tab2:AddToggle({Name = "Crystal Ore",Default = false,Callback = function(value)
         _G.loop = true
         while _G.loop do
             wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
     end)
@@ -590,7 +675,7 @@ Tab2:AddToggle({Name = "Stardust Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(4436.15380859375, -718.8125, 5940.41162109375)})
+            {CFrame = CFrame.new(-3580.855712890625, -339.0189208984375, -515.154541015625)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -600,66 +685,17 @@ Tab2:AddToggle({Name = "Stardust Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(4419.74072265625, -718.9945678710938, 5924.68798828125)
+                HumanoidRootPart.CFrame = CFrame.new(-3503.60595703125, -339.6742248535156, -459.7414245605469)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4447.08154296875, -718.5276489257812, 5998.458984375)
+                HumanoidRootPart.CFrame = CFrame.new(-3467.051025390625, -339.6742248535156, -469.66162109375)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4489.96484375, -716.4467163085938, 5993.50927734375)
+                HumanoidRootPart.CFrame = CFrame.new(-3495.773681640625, -339.6742248535156, -578.3414306640625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4610.40771484375, -719.0302734375, 6142.06591796875)
+                HumanoidRootPart.CFrame = CFrame.new(-3186.53076171875, 421.57598876953125, -463.7036437988281)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4652.82958984375, -719.0028686523438, 6168.767578125)
+                HumanoidRootPart.CFrame = CFrame.new(-3155.93310546875, 421.57598876953125, -537.44482421875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4688.0419921875, -714.1721801757812, 6122.109375)
-                wait(3)
-            end
-        end)
-        
-        _G.loop = true
-        while _G.loop do
-            wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
-    end)
-else
-
-    _G.loop = false
-    TweenRunning = true
-end
-end
-})
-
-------------------------------------------------------------------------------------------------------------------------------------
-
---- Galaxy Ore
-Tab2:AddToggle({Name = "Galaxy Ore",Default = false,Callback = function(value)
-    Galaxy = value
-        if value then
-            local TweenService = game:GetService("TweenService")
-            local Character = game.Players.LocalPlayer.Character
-            local HumanoidRootPart = Character.HumanoidRootPart
-        
-        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(4435.376953125, -718.833984375, 5937.564453125)})
-        Tween1:Play()
-        Tween1.Completed:Connect(function()
-            TweenRunning = false
-        end)
-
-        Tween1.Completed:Connect(function()
-        wait(2)
-        spawn(function()
-            while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(4450.439453125, -718.3632202148438, 5926.44580078125)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4460.92724609375, -718.848876953125, 6084.24755859375)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4563.1201171875, -719.0302734375, 6110.5439453125)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4612.771484375, -718.4227294921875, 6174.74169921875)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4721.5732421875, -719.0125732421875, 6143.01416015625)
+                HumanoidRootPart.CFrame = CFrame.new(-3157.453125, 421.57598876953125, -723.3267822265625)
                 wait(3)
             end
         end)
@@ -667,99 +703,7 @@ Tab2:AddToggle({Name = "Galaxy Ore",Default = false,Callback = function(value)
         _G.loop = true
         while _G.loop do
             wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
-    end)
-else
-
-    _G.loop = false
-    TweenRunning = true
-end
-end
-})
-
-------------------------------------------------------------------------------------------------------------------------------------
-
----Crystalight Ore
-Tab2:AddToggle({Name = "Crystalight Ore",Default = false,Callback = function(value)
-    Crystalight = value
-        if value then
-            local TweenService = game:GetService("TweenService")
-            local Character = game.Players.LocalPlayer.Character
-            local HumanoidRootPart = Character.HumanoidRootPart
-        
-        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(4817.4697265625, -778.4513549804688, 6516.32421875)})
-        Tween1:Play()
-        Tween1.Completed:Connect(function()
-            TweenRunning = false
-        end)
-
-        Tween1.Completed:Connect(function()
-        wait(2)
-        spawn(function()
-            while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(4751.328125, -786.6865234375, 6517.603515625)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4726.85595703125, -781.67236328125, 6652.6982421875)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4807.01318359375, -781.0653686523438, 6607.42724609375)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4827.76220703125, -773.6183471679688, 6457.05517578125)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(4279.275390625, -808.8141479492188, 6411.01171875)
-                wait(3)
-            end
-        end)
-        
-        _G.loop = true
-        while _G.loop do
-            wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
-    end)
-else
-
-    _G.loop = false
-    TweenRunning = true
-end
-end
-})
-
-------------------------------------------------------------------------------------------------------------------------------------
-
----Frenzy Ore
-Tab2:AddToggle({Name = "Frenzy Ore",Default = false,Callback = function(value)
-    Frenzy = value
-        if value then
-            local TweenService = game:GetService("TweenService")
-            local Character = game.Players.LocalPlayer.Character
-            local HumanoidRootPart = Character.HumanoidRootPart
-        
-        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(4830.4248046875, -773.9840698242188, 6471.947265625)})
-        Tween1:Play()
-        Tween1.Completed:Connect(function()
-            TweenRunning = false
-        end)
-
-        Tween1.Completed:Connect(function()
-        wait(2)
-        spawn(function()
-            while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(4799.3095703125, -786.069580078125, 6477.14697265625)
-                wait(3)
-            end
-        end)
-
-
-
-        _G.loop = true
-        while _G.loop do
-            wait()
-            workspace.cgg250za.PickAxe.SwordScript.Activate:FireServer()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
     end)
@@ -952,16 +896,18 @@ local Section = Tab4:AddSection({
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
----Boar King Level:40
-local MobName = "BoarMan"
 
-    local BoarManMob = true
+---Tanzaknite Level:90
+local MobName = "Tanzaknite"
+local BowAttack = true
+local Mon = true
+
     Tab4:AddToggle({
-        Name = "Boar King Level:40",
+        Name = "Tanzaknite Level:90",
         Default = false,
         Callback = function(value)
-            BoarManMob = value
-            if BoarManMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -975,39 +921,42 @@ local MobName = "BoarMan"
             Tw:Play()
             wait(5)
 
-                while BoarManMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while BoarManMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
-
-                            
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----Golem Level:50
-local MobName = "Golem"
+---Ronin Level:110 : Level:120
+local MobName = "Ronin"
+local BowAttack = true
+local Mon = true
 
-    local GolemMob = true
     Tab4:AddToggle({
-        Name = "Golem Level:50",
+        Name = "Ronin Level:110 : Level:120",
         Default = false,
         Callback = function(value)
-            GolemMob = value
-            if GolemMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1017,40 +966,50 @@ local MobName = "Golem"
                 local char = player.Character
         
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 80}),
-            {CFrame = CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531)})
+            {CFrame = CFrame.new(493.67132568359375, 52.956661224365234, -406.1116943359375)})
             Tw:Play()
             wait(5)
                         
-                while GolemMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                    spawn(function()
+                        while Mon do
+                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
+                        end
+                    end)
                     
                 spawn(function()
-                    while GolemMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait(2)
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----Elsa Level:75
-local MobName = "Elsa"
+---Pharaoh Level:125
+local MobName = "Pharaoh"
+local BowAttack = true
+local Mon = true
 
-    local ElsaMob = true
     Tab4:AddToggle({
-        Name = "Elsa Level:75",
+        Name = "Pharaoh Level:125",
         Default = false,
         Callback = function(value)
-            ElsaMob = value
-            if ElsaMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1064,36 +1023,42 @@ local MobName = "Elsa"
             Tw:Play()
             wait(5)
             
-                while ElsaMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while ElsaMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----Rouge Paladin Level:80
-local MobName = "RougePaladin"
+---Demon Chest Level:200
+local MobName = "MimicChest"
+local BowAttack = true
+local Mon = true
 
-    local RougePaladinMob = true
     Tab4:AddToggle({
-        Name = "Rouge Paladin Level:80",
+        Name = "Demon Chest Level:200",
         Default = false,
         Callback = function(value)
-            RougePaladinMob = value
-            if RougePaladinMob then
+             Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1107,36 +1072,43 @@ local MobName = "RougePaladin"
             Tw:Play()
             wait(5)
 
-                while RougePaladinMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while RougePaladinMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----Ruined Knight Level:85
-local MobName = "RuinedKnight"
+---Sea King Level:200
+local MobName = "SeaKing"
+local BowAttack = true
+local Mon = true
 
-local RuinedKnightMob = true
 Tab4:AddToggle({
-    Name = "Ruined Knight Level:85",
+    Name = "Sea King Level:200",
     Default = false,
     Callback = function(value)
-        RuinedKnightMob = value
-        if RuinedKnightMob then
+            Mon = value
+            if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1146,40 +1118,47 @@ Tab4:AddToggle({
             local char = player.Character
             
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-3352.9599609375, -339.080078125, -927.61474609375)})
+            {CFrame = CFrame.new(863.7012329101562, 98.45106506347656, 3254.254150390625)})
             Tw:Play()
             wait(5)
-
-                while RuinedKnightMob do
+            
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while RuinedKnightMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----Hiyay Level:90
-local MobName = "Hiei"
+---Abyss Knight Level:370
+local MobName = "AbyssKnight"
+local BowAttack = true
+local Mon = true
 
-    local HieiMob = true
     Tab4:AddToggle({
-        Name = "Hiyay Level:90",
+        Name = "Abyss Knight Level:370",
         Default = false,
         Callback = function(value)
-            HieiMob = value
-            if HieiMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1189,39 +1168,46 @@ local MobName = "Hiei"
                 local char = player.Character
 
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-3118.810791015625, 463.95001220703125, -1143.85107421875)})
+            {CFrame = CFrame.new(4464.462890625, -681.4097900390625, 6409.998046875)})
             Tw:Play()
             wait(5)
 
-                while HieiMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while HieiMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----Kaze Level:100
-local MobName = "Kaze"
+---Hiraglacir Level:380
+local MobName = "Hiraglacir"
+local BowAttack = true
+local Mon = true
 
-    local KazeMob = true
     Tab4:AddToggle({
-        Name = "Kaze Level:100",
+        Name = "Hiraglacir Level:380",
         Default = false,
         Callback = function(value)
-            KazeMob = value
-            if KazeMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1231,40 +1217,46 @@ local MobName = "Kaze"
                 local char = player.Character
                 
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-3391.675537109375, -339.6742248535156, -1573.0989990234375)})
+            {CFrame = CFrame.new(-48.32590103149414, 29.16637420654297, 8419.5947265625)})
             Tw:Play()
             wait(5)
 
-                while KazeMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while KazeMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----Nodryre Level:100
-local MobName = "Nodryre"
+---Lightning God Level:400
+local MobName = "LightningGod"
+local BowAttack = true
+local Mon = true
 
-    local NodryreMob = true
     Tab4:AddToggle({
-        Name = "Nodryre Level:100",
+        Name = "Lightning God Level:400",
         Default = false,
         Callback = function(value)
-            NodryreMob = value
-            if NodryreMob then
+            Mon = value
+            if Mon then
     
                 local tweenService = game:GetService("TweenService")
                 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1274,40 +1266,47 @@ local MobName = "Nodryre"
                 local char = player.Character
                 
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(337.80072021484375, 119.6746597290039, -395.810302734375)})
+            {CFrame = CFrame.new(-6193.55029296875, 1838.0281982421875, 4058.882568359375)})
             Tw:Play()
             wait(5)
 
-                while NodryreMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while NodryreMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----Flame Dragon Level:105
-local MobName = "Dragon"
+---Chain User Level:445
+local MobName = "ChainUser"
+local BowAttack = true
+local Mon = true
 
-local DragonMon = true
 Tab4:AddToggle({
-    Name = "Dragon Level:105",
+    Name = "Chain User Level:445",
     Default = false,
     Callback = function(value)
-        DragonMon = value
-        if DragonMon then
+            Mon = value
+            if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1317,40 +1316,96 @@ Tab4:AddToggle({
             local char = player.Character
             
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-2473.820068359375, -4.971416473388672, -515.5170288085938)})
+            {CFrame = CFrame.new(4766.06494140625, 70.90894317626953, 6961.81298828125)})
             Tw:Play()
             wait(5)
 
-                while BoarManMob do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while BoarManMob do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
+    Mon = false
+end
+})
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+---Law Level:450
+local MobName = "Law"
+local BowAttack = true
+local Mon = true
+
+Tab4:AddToggle({
+    Name = "Law Level:450",
+    Default = false,
+    Callback = function(value)
+            Mon = value
+            if Mon then
+                
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+            
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            {CFrame = CFrame.new(944.6262817382812, 19.46990966796875, -554.6542358398438)})
+            Tw:Play()
+            wait(5)
+
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                    
+                spawn(function()
+                    while BowAttack do
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    wait(0.1)
+                    end
+                end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
+            end
+            wait()
+        end
     end
+    Mon = false
 end
 })
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
----MichKal Level:150
-local MobName = "Michkal"
+---Rotted Knight Level:470
+local MobName = "RottedKnight"
+local BowAttack = true
+local Mon = true
 
-local MichkalMon = true
 Tab4:AddToggle({
-    Name = "MichKal Level:150",
+    Name = "Rotted Knight Level:470",
     Default = false,
     Callback = function(value)
-        MichkalMon = value
-        if MichkalMon then
+            Mon = value
+            if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1359,41 +1414,48 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375)})
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            {CFrame = CFrame.new(-4525.54638671875, 76.13517761230469, 1429.17724609375)})
             Tw:Play()
-            wait(5)
+            wait(1)
 
-                while MichkalMon do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while MichkalMon do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
----Melioofus Level:200
-local MobName = "Melioofus"
+---Master Swordsman Level:500
+local MobName = "MasterSwordsman"
+local BowAttack = true
+local Mon = true
 
-local MelioofusMon = true
 Tab4:AddToggle({
-    Name = "Melioofus Level:200",
+    Name = "Master Swordsman Level:500",
     Default = false,
     Callback = function(value)
-        MelioofusMon = value
-        if MelioofusMon then
+            Mon = value
+            if Mon then
+
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1403,81 +1465,46 @@ Tab4:AddToggle({
             local char = player.Character
             
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625)})
+            {CFrame = CFrame.new(-1629.2760009765625, 354.9918518066406, 4789.28857421875)})
             Tw:Play()
             wait(5)
 
-                while MelioofusMon do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while MelioofusMon do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
-end
-})
------------------------------------------------------------------------------------------------------------------------------------------------
-
----Legendary Super Level:200
-local MobName = "Legendary"
-
-local LegendaryMon = true
-Tab4:AddToggle({
-    Name = "Legendary Level:200",
-    Default = false,
-    Callback = function(value)
-        LegendaryMon = value
-        if LegendaryMon then
-
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-            
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375)})
-            Tw:Play()
-            wait(5)
-
-                while BoarManMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while BoarManMob do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
+    Mon = false
 end
 })
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-local MobName = "LegendarySuper"
+---Nightmare Level:500
+local MobName = "Nightmare"
+local BowAttack = true
+local Mon = true
 
-local LegendarySuperMon = true
 Tab4:AddToggle({
-    Name = "Legendary Super Level:200",
+    Name = "Nightmare Level:500",
     Default = false,
     Callback = function(value)
-        LegendarySuperMon = value
-        if LegendarySuperMon then
+            Mon = value
+            if Mon then
 
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -1487,937 +1514,33 @@ Tab4:AddToggle({
             local char = player.Character
             
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-2473.820068359375, -4.971416473388672, -515.5170288085938)})
+            {CFrame = CFrame.new(467.154296875, 901.2927856445312, 2513.03515625)})
             Tw:Play()
             wait(5)
 
-                while BoarManMob do
-                for i,v in pairs(game.workspace:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while BoarManMob do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
------------------------------------------------------------------------------------------------------------------------------------------------
-
----Kurito Level:333
-local MobName = "Kurito"
-
-local KuritoMon = true
-Tab4:AddToggle({
-    Name = "Kurito Level:333",
-    Default = false,
-    Callback = function(value)
-        KuritoMon = value
-        if KuritoMon then
-
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-            
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281)})
-            Tw:Play()
-            wait(5)
-
-                while KuritoMon do
+                while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
                 spawn(function()
-                    while KuritoMon do
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     wait(0.1)
                     end
                 end)
+                    wait(10)
+                    BowAttack = false
+                    wait(5)
+                    BowAttack = true
+                end
             end
+            wait()
         end
-        wait()
     end
-    end
+    Mon = false
 end
 })
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
----Regulus Level:???
-local MobName = "Regulus"
-local loopConnection 
-
-
-local RegulusMob = true
-Tab4:AddToggle({
-    Name = "Regulus Level:???",
-    Default = false,
-    Callback = function(value)
-        RegulusMob = value
-    
-        if RegulusMob then
-
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-            
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 80}),
-            {CFrame = CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125)})
-            Tw:Play()
-            wait(5)
-                        
-                while RegulusMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while RegulusMob do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
------------------------------------------------------------------------------------------------------------------
-
-local Section = Tab4:AddSection({
-	Name = "DualSwords Farm"
-})
-----------------------------------------------------------------------------------------------------------------
-
-local MobName = "Bandit"
-
-    local BanditMob = true
-    Tab4:AddToggle({
-        Name = "Bandit Level:2",
-        Default = false,
-        Callback = function(value)
-            BanditMob = value
-            if BanditMob then
-    
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while BanditMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    wait(1.5)
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    task.wait(0.7)
-                            
-                spawn(function()
-                    while BanditMob do wait()
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
-----------------------------------------------------------------------------------------------------------------
-
----Goblin Level:3
-local MobName = "Goblin"
-
-    local GoblinMob = true
-    Tab4:AddToggle({
-        Name = "Goblin Level:3",
-        Default = false,
-        Callback = function(value)
-            GoblinMob = value
-            if GoblinMob then
-    
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while GoblinMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    wait(1.5)
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    task.wait(0.7)
-                            
-                spawn(function()
-                    while GoblinMob do wait()
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----HobGoblin Level:5
-local MobName = "HobGoblin"
-
-    local HobGoblinMob = true
-    Tab4:AddToggle({
-        Name = "HobGoblin Level:5",
-        Default = false,
-        Callback = function(value)
-            HobGoblinMob = value
-            if HobGoblinMob then
-    
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while HobGoblinMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    wait(1.5)
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    task.wait(0.7)
-                            
-                spawn(function()
-                    while HobGoblinMob do wait()
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----Skeleton Level:15
-local MobName = "Skeleton"
-
-    local SkeletonMob = true
-    Tab4:AddToggle({
-        Name = "Skeleton Level:15",
-        Default = false,
-        Callback = function(value)
-            SkeletonMob = value
-            if SkeletonMob then
-    
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while SkeletonMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    wait(1.5)
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    task.wait(0.7)
-                            
-                spawn(function()
-                    while SkeletonMob do wait()
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DarkStoneKnight Level:25
-local MobName = "DarkStoneKnight"
-
-    local DarkStoneKnightMob = true
-    Tab4:AddToggle({
-        Name = "DarkStoneKnight Level:25",
-        Default = false,
-        Callback = function(value)
-            DarkStoneKnightMob = value
-            if DarkStoneKnightMob then
-    
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while DarkStoneKnightMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    wait(1.5)
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    task.wait(0.7)
-                            
-                spawn(function()
-                    while DarkStoneKnightMob do wait()
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
-----------------------------------------------------------------------------------------------------------------
-
----Witch Level:35
-local MobName = "Witch"
-
-    local WitchMob = true
-    Tab4:AddToggle({
-        Name = "Witch Level:35",
-        Default = false,
-        Callback = function(value)
-            WitchMob = value
-            if WitchMob then
-    
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(2, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while WitchMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while WitchMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
-----------------------------------------------------------------------------------------------------------------
----DualSwords Boar King Level:40
-local MobName = "BoarMan"
-
-    local BoarManMob = true
-    Tab4:AddToggle({
-        Name = "Boar King Level:40",
-        Default = false,
-        Callback = function(value)
-            BoarManMob = value
-            if BoarManMob then
-    
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(2, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while BoarManMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while BoarManMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Golem Level:50
-local MobName = "Golem"
-local GolemMob = true
-
-    Tab4:AddToggle({
-        Name = "Golem Level:50",
-        Default = false,
-        Callback = function(value)
-            GolemMob = value
-            if GolemMob then
-    
-            local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-                
-            while GolemMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while GolemMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Elsa Level:75
-local MobName = "Elsa"
-
-    local ElsaMob = true
-    Tab4:AddToggle({
-        Name = "Elsa Level:75",
-        Default = false,
-        Callback = function(value)
-            ElsaMob = value
-            if ElsaMob then
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while ElsaMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while ElsaMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Rouge Paladin Level:80
-local MobName = "RougePaladin"
-
-    local RougePaladinMob = true
-    Tab4:AddToggle({
-        Name = "Rouge Paladin Level:80",
-        Default = false,
-        Callback = function(value)
-            RougePaladinMob = value
-            if RougePaladinMob then
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while RougePaladinMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while RougePaladinMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Ruined Knight Level:85
-local MobName = "RuinedKnight"
-
-local RuinedKnightMob = true
-Tab4:AddToggle({
-    Name = "Ruined Knight Level:85",
-    Default = false,
-    Callback = function(value)
-        RuinedKnightMob = value
-        if RuinedKnightMob then
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while RuinedKnightMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while RuinedKnightMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Hiyay Level:90
-local MobName = "Hiei"
-
-    local HieiMob = true
-    Tab4:AddToggle({
-        Name = "Hiyay Level:90",
-        Default = false,
-        Callback = function(value)
-            HieiMob = value
-            if HieiMob then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while HieiMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while HieiMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Kaze Level:100
-local MobName = "Kaze"
-
-    local KazeMob = true
-    Tab4:AddToggle({
-        Name = "Kaze Level:100",
-        Default = false,
-        Callback = function(value)
-            KazeMob = value
-            if KazeMob then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while KazeMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while KazeMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-------------------------------------------------------------------------------------------------------------------
-
----DualSwords Nodryre Level:100
-local MobName = "Nodryre"
-
-    local NodryreMob = true
-    Tab4:AddToggle({
-        Name = "Nodryre Level:100",
-        Default = false,
-        Callback = function(value)
-            NodryreMob = value
-            if NodryreMob then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while NodryreMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while NodryreMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Flame Dragon Level:105
-local MobName = "Dragon"
-
-local DragonMon = true
-Tab4:AddToggle({
-    Name = "Dragon Level:105",
-    Default = false,
-    Callback = function(value)
-        DragonMon = value
-        if DragonMon then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while DragonMon do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while DragonMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords MichKal Level:150
-local MobName = "Michkal"
-
-local MichkalMon = true
-Tab4:AddToggle({
-    Name = "MichKal Level:150",
-    Default = false,
-    Callback = function(value)
-        MichkalMon = value
-        if MichkalMon then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while MichkalMon do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while MichkalMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Melioofus Level:200
-local MobName = "Melioofus"
-
-local MelioofusMon = true
-Tab4:AddToggle({
-    Name = "Melioofus Level:200",
-    Default = false,
-    Callback = function(value)
-        MelioofusMon = value
-        if MelioofusMon then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while MelioofusMon do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while MelioofusMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
-------------------------------------------------------------------------------------------------------------------
-
----DualSwords Legendary Level:200
-local MobName = "Legendary"
-
-local LegendaryMon = true
-Tab4:AddToggle({
-    Name = "Legendary Level:200",
-    Default = false,
-    Callback = function(value)
-        LegendaryMon = value
-        if LegendaryMon then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while LegendaryMon do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while LegendaryMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
----DualSwords Legendary Super Level:200
-local MobName = "LegendarySuper"
-
-local LegendarySuperMon = true
-Tab4:AddToggle({
-    Name = "Legendary Super Level:200",
-    Default = false,
-    Callback = function(value)
-        LegendarySuperMon = value
-        if LegendarySuperMon then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while LegendarySuperMon do
-                for i,v in pairs(game.workspace:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while LegendarySuperMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Kurito Level:333
-local MobName = "Kurito"
-
-local KuritoMon = true
-Tab4:AddToggle({
-    Name = "Kurito Level:333",
-    Default = false,
-    Callback = function(value)
-        KuritoMon = value
-        if KuritoMon then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while KuritoMon do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while KuritoMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
-
------------------------------------------------------------------------------------------------------------------
-
----DualSwords Regulus Level:???
-local MobName = "Regulus"
-local RegulusMob = false
-
-Tab4:AddToggle({
-    Name = "Regulus Level:???",
-    Default = false,
-    Callback = function(value)
-        RegulusMob = value
-    
-        if RegulusMob then
-
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-    
-            while RegulusMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while RegulusMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
+----------------------------------------------------------------------------------------------------------------------------------------------
 --
 ---
 ----
@@ -2451,10 +1574,10 @@ end
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(62.65230941772461, 19.46990966796875, -250.31268310546875)})
             Tw:Play()
-            wait(5)
+            wait(7)
             
             end
         end
@@ -2477,10 +1600,10 @@ end
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(136.86654663085938, 938.8798828125, 3112.347412109375)})
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            {CFrame = CFrame.new(467.154296875, 901.2927856445312, 2513.03515625)})
             Tw:Play()
-            wait(5)
+            wait(7)
             
             end
         end
@@ -2503,10 +1626,10 @@ end
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-6021.47607421875, 1856.9366455078125, 4032.2646484375)})
             Tw:Play()
-            wait(5)
+            wait(7)
             
             end
         end
@@ -2529,10 +1652,10 @@ end
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-1946.349853515625, 263.85894775390625, 5111.33935546875)})
             Tw:Play()
-            wait(5)
+            wait(7)
             
             end
         end
@@ -2555,10 +1678,10 @@ end
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-4521.52001953125, 20.193286895751953, 1641.5771484375)})
             Tw:Play()
-            wait(5)
+            wait(7)
             
             end
         end
@@ -2581,10 +1704,10 @@ end
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(8.041343688964844, 19.95615005493164, 8244.5341796875)})
             Tw:Play()
-            wait(5)
+            wait(7)
             
             end
         end
@@ -2607,10 +1730,10 @@ end
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(4253.72314453125, -155.29238891601562, 6427.59765625)})
             Tw:Play()
-            wait(5)
+            wait(7)
             
             end
         end
