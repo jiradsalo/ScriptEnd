@@ -40,13 +40,23 @@ game:GetService("UserInputService").JumpRequest:connect(onJumpRequest)
 
 --------------------------------------------------------------------------------------------------------------------------------
 
-
+Tab1:AddToggle({
+    Name = "Speed 180",
+    Default = false,
+    Callback = function(value)
+        if value then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 180
+        else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end
+    end
+})
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
 
 Tab1:AddToggle({
-    Name = "Speed 400",
+    Name = "Speed Max",
     Default = false,
     Callback = function(value)
         if value then
@@ -63,7 +73,7 @@ Tab1:AddToggle({
 
 local Mon = true
 Tab1:AddToggle({
-    Name = "rep",
+    Name = "Auto Farm",
     Default = false,
     Callback = function(value)
         Mon = value
@@ -103,6 +113,54 @@ Tab1:AddToggle({
             end
         end
 })
+
+
+local Mon = true
+Tab1:AddToggle({
+    Name = "ฟามแล้ววิ่งได้",
+    Default = false,
+    Callback = function(value)
+        Mon = value
+        if Mon then
+            
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 280
+        else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end
+            if Mon then
+        while Mon do wait()
+        local ohString1 = "rep"
+        game:GetService("Players").LocalPlayer.muscleEvent:FireServer(ohString1)
+        end
+
+
+    end
+end
+})
+
+local Mon = true
+Tab1:AddToggle({
+    Name = "Farm Speed",
+    Default = false,
+    Callback = function(value)
+        Mon = value
+        if Mon then
+            
+local args = {
+    [1] = "changeSize",
+    [2] = 1
+}
+game:GetService("ReplicatedStorage").rEvents.changeSpeedSizeRemote:InvokeServer(unpack(args))
+while Mon do wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(213.80409240722656, 8.192078590393066, 219.95391845703125)
+keypress(0x57)
+end 
+end
+end
+})
+
+
+
 
 
 
