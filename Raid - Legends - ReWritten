@@ -1,0 +1,672 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Legends Re:Written", HidePremium = false, SaveConfig = false, ConfigFolder = "asdsahgjasdhkgjbdsa"})
+
+-------------------------------------------------  Star Players  -------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+---------------------------------------------------------------------------------------------------------------------
+local Tab1 = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://12836323838",
+	PremiumOnly = false
+})
+-------------------------------------------
+local Tab2 = Window:MakeTab({
+	Name = "Raid Lv.50",
+	Icon = "rbxassetid://12836287616",
+	PremiumOnly = false
+})
+-------------------------------------------
+
+local Tab3 = Window:MakeTab({
+	Name = "Raid Lv.60",
+	Icon = "rbxassetid://12836287616",
+	PremiumOnly = false
+})
+
+-------------------------------------------
+
+local Tab4 = Window:MakeTab({
+	Name = "Oter",
+	Icon = "rbxassetid://12836304245",
+	PremiumOnly = false
+})
+--------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+InfJump = false
+Tab1:AddToggle({
+    Name = "InfJump",
+    Default = false,
+    Callback = function(value)
+        InfJump = value
+    end
+})
+
+local function onJumpRequest()
+    if InfJump then
+        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+    end
+end
+
+game:GetService("UserInputService").JumpRequest:connect(onJumpRequest)
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+local DeWarter = true
+Tab1:AddButton({
+    Name = "De Warter",
+    Callback = function(value)
+        if DeWarter then
+        game:GetService("Workspace").WaterTextures:Destroy()
+        end
+    end
+})
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+local Speed = 0
+Tab1:AddTextbox({
+    Name = "Speed",
+    Default = "      ",
+    TextDisappear = true,
+    Callback = function(value)
+        local amount = tonumber(value)
+        if amount and amount > 0 then
+            Speed = amount
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
+        end
+    end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+local RuneArrows = true
+Tab1:AddTextbox({
+    Name = "RuneArrows",
+    Default = "      ",
+    TextDisappear = true,
+    Callback = function(value)
+        local amount = tonumber(value)
+        if amount and amount > 0 and RuneArrows then
+            local ohString1 = "RuneArrows"
+            local ohString2 = "Bows"
+            local ohNumber3 = amount
+            game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(ohString1, ohString2, ohNumber3)
+        end
+    end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Players  --------------------------------------------------
+
+
+-------------------------------------------------  Star Rais Lv.50-------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Raid Gigy Save HP
+local MobName = {"Lahmu","MysticIllusionist"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "Raid Gigy Save HP",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    end
+                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"Lahmu","MysticIllusionist"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "Raid Gigy No Save Hp",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,6)}):Play()
+                    
+
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    end
+                 end)
+                wait(2)
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Ronin Level:110 : Level:120
+local MobName = {"DesertSnake","Enkidu","Gilgamesh"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "Raid Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") then
+                    
+
+                 spawn(function()
+                    while BowAttack do
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    wait(0.1)
+                    end
+                end)
+                    wait(5)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Raid Lv.50 -----------------------------------------------------------
+
+
+
+-------------------------------------------------  Star Rais Lv.60-------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "All Raid Gigy",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,10)}):Play()
+                    
+
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    end
+                 end)
+                wait(2)
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard",
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "All Raid Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,70)}):Play()
+                    
+
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    end
+                 end)
+                wait(2)
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Raid Gigy Save HP
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Raid Gigy Save HP",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    end
+                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Raid Gigy No Save Hp",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,6)}):Play()
+                    
+
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    end
+                 end)
+                wait(2)
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Regurus Raid",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,6)}):Play()
+                    
+
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Greed.ServerScript.Charge:FireServer()
+                    end
+                 end)
+                wait(2)
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "GattlingGun",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,5)}):Play()
+                    
+
+                 spawn(function()
+                    while BowAttack do 
+                    char.GattlingGun.ServerScript.Charge:FireServer()
+                    wait(4)
+                    end
+                 end)
+                wait(1)
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Ronin Level:110 : Level:120
+local MobName = {"IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Raid Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+        while Mon do
+            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") then
+                    
+
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    end
+                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
+                end
+            end
+            wait()
+        end
+    end
+    Mon = false
+end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Raid Lv.60 -----------------------------------------------------------
+
+
+-------------------------------------------------  Star Oter  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AntiAFK = false
+
+Tab4:AddToggle({
+    Name = "Anti AFK",
+    Default = false,
+        Callback = function(value)
+        AntiAFK = value
+        if AntiAFK then
+            wait(3)
+            local VirtualUser=game:service'VirtualUser'
+            game:service('Players').LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+            end)
+            end
+        end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Off Shake Camera
+local OffShake = true
+Tab4:AddToggle({
+    Name = "Off Shake Camera",
+    Default = false,
+    Callback = function(value)
+        if OffShake then
+            game:GetService("UserInputService").WindowFocused:connect(function()
+                game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Fixed}):Play()
+            end)
+        else
+            game:GetService("UserInputService").WindowFocused:connect(function()
+                game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Custom}):Play()
+            end)
+        end
+    end
+})
+
+local Rejoin = true
+Tab4:AddButton({
+    Name = "Rejoin",
+    Callback = function(value)
+        if Rejoin then
+            local tpservice = game:GetService("TeleportService")
+            local plr = game.Players.LocalPlayer
+            tpservice:Teleport(game.PlaceId, plr)
+        end
+    end
+})
+------------------------------------------------------------------------------------------------------------------
+local Shutdown = true
+Tab4:AddButton({
+    Name = "Shutdown",
+    Callback = function(value)
+        if Shutdown then
+            game:Shutdown()
+        end
+    end
+})
+
+
+
+
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Oter  ----------------------------------------------------
+OrionLib:Init()
