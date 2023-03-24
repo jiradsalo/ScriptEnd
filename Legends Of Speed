@@ -1,0 +1,89 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Legends Of Speed", HidePremium = false, SaveConfig = false, ConfigFolder = "asdsahgjasdhkgjbdsa"})
+
+-------------------------------------------------  Star Players  -------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+---------------------------------------------------------------------------------------------------------------------
+local Tab1 = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://12836323838",
+	PremiumOnly = false
+})
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+InfJump = false
+Tab1:AddToggle({
+    Name = "InfJump",
+    Default = false,
+    Callback = function(value)
+        InfJump = value
+    end
+})
+
+local function onJumpRequest()
+    if InfJump then
+        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+    end
+end
+
+game:GetService("UserInputService").JumpRequest:connect(onJumpRequest)
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+Tab1:AddToggle({
+    Name = "Speed 400",
+    Default = false,
+    Callback = function(value)
+        if value then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 400
+        else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end
+    end
+})
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+local Mon = true
+Tab1:AddToggle({
+    Name = "rep",
+    Default = false,
+    Callback = function(value)
+        Mon = value
+        if Mon then
+                        
+        local TweenService = game:GetService("TweenService")
+        local Character = game.Players.LocalPlayer.Character
+        local HumanoidRootPart = Character.HumanoidRootPart
+        
+        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+            {CFrame = CFrame.new(875.603515625, 44.00257873535156, 342.7630615234375)})
+        Tween1:Play()
+        
+        while Mon do wait()
+        local ohString1 = "rep"
+        game:GetService("Players").LocalPlayer.muscleEvent:FireServer(ohString1)
+        end
+    end
+end
+})
+
+
+OrionLib:Init()
