@@ -186,7 +186,7 @@ Tab2:AddToggle({Name = "Bronz Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
 
             local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-                {CFrame = CFrame.new(248.7452850341797, 51.284996032714844, -338.2414855957031)})
+                {CFrame = CFrame.new(253.70620727539062, 51.7508544921875, -319.1665954589844)})
             Tween1:Play()
             Tween1.Completed:Connect(function()
                 TweenRunning = false
@@ -196,7 +196,7 @@ Tab2:AddToggle({Name = "Bronz Ore",Default = false,Callback = function(value)
                 wait(2)
                 spawn(function()
                     while value and not TweenRunning do
-                        HumanoidRootPart.CFrame = CFrame.new(239.96347045898438, 52.77890396118164, -315.93853759765625)
+                        HumanoidRootPart.CFrame = CFrame.new(239.73696899414062, 52.97087478637695, -316.14520263671875)
                         wait(3)
                         HumanoidRootPart.CFrame = CFrame.new(194.9040985107422, 19.517311096191406, -337.9369201660156)
                         wait(3)
@@ -207,18 +207,16 @@ Tab2:AddToggle({Name = "Bronz Ore",Default = false,Callback = function(value)
                     end
                 end)
 
-                _G.loop = true
-                while _G.loop do
-                    wait()
-                    game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                end
-            end)
-        else
+           local PickAxe = true  
+        while PickAxe do wait()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
+            end
+    end)
+else
 
-            _G.loop = false
-            TweenRunning = true
-        end
+    PickAxe = false
+    TweenRunning = true
+end
 end
 })
 
@@ -252,16 +250,14 @@ Tab2:AddToggle({Name = "Iron Ore",Default = false,Callback = function(value)
             end
         end)
         
-        _G.loop = true
-        while _G.loop do
-            wait()
+        local PickAxe = true  
+        while PickAxe do wait()
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
+            end
     end)
 else
 
-    _G.loop = false
+    PickAxe = false
     TweenRunning = true
 end
 end
@@ -297,16 +293,14 @@ local Toggle = Tab2:AddToggle({Name = "Black Ore",Default = false,Callback = fun
             end
         end)
         
-        _G.loop = true
-        while _G.loop do
-            wait()
+        local PickAxe = true  
+        while PickAxe do wait()
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
+            end
     end)
 else
 
-    _G.loop = false
+    PickAxe = false
     TweenRunning = true
 end
 end
@@ -323,7 +317,7 @@ Tab2:AddToggle({Name = "Adamant Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-334.38031005859375, 214.60646057128906, -319.04913330078125)})
+            {CFrame = CFrame.new(-330.7143249511719, 214.9051971435547, -325.5738525390625)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -333,48 +327,39 @@ Tab2:AddToggle({Name = "Adamant Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3106.1630859375, 85.29292297363281, -1316.1104736328125)
+                HumanoidRootPart.CFrame = CFrame.new(-323.6196594238281, 215.02316284179688, -325.8515625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3134.091796875, 85.29292297363281, -1305.6103515625)
+                HumanoidRootPart.CFrame = CFrame.new(-359.86956787109375, 210.59722900390625, -328.3359069824219)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3187.031982421875, 85.29292297363281, -1305.5703125)
+                HumanoidRootPart.CFrame = CFrame.new(-330.3594665527344, 186.15567016601562, -439.197998046875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3110.46826171875, 85.49807739257812, -1185.5902099609375)
+                HumanoidRootPart.CFrame = CFrame.new(-353.5116882324219, 139.93310546875, -427.1103210449219)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3125.274658203125, 85.29292297363281, -1199.0701904296875)
+                HumanoidRootPart.CFrame = CFrame.new(-367.4247741699219, 139.52586364746094, -356.20098876953125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3183.752197265625, 85.29292297363281, -1207.04443359375)
+                HumanoidRootPart.CFrame = CFrame.new(-392.8315124511719, 137.77349853515625, -348.9147644042969)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3246.542236328125, 183.949951171875, -674.6106567382812)
+                HumanoidRootPart.CFrame = CFrame.new(-382.199462890625, 141.27218627929688, -332.5194091796875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3254.12841796875, 183.949951171875, -674.9178466796875)
+                HumanoidRootPart.CFrame = CFrame.new(-381.3611145019531, 93.83789825439453, -382.1306457519531)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3249.0263671875, 183.949951171875, -667.6703491210938)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3260.558349609375, 221.949951171875, -518.5996704101562)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3247.259033203125, 221.949951171875, -518.2675170898438)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3250.845458984375, 221.949951171875, -504.1876220703125)
+                HumanoidRootPart.CFrame = CFrame.new(-359.61029052734375, 91.9556655883789, -405.3069152832031)
                 wait(3)
             end
         end)
         
-        _G.loop = true
-        while _G.loop do
-            wait()
+        local PickAxe = true  
+        while PickAxe do wait()
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
+            end
     end)
 else
 
-    _G.loop = false
+    PickAxe = false
     TweenRunning = true
 end
 end
 })
-
 ------------------------------------------------------------------------------------------------------------------------------------
 
 --- White Stone
@@ -386,7 +371,7 @@ Tab2:AddToggle({Name = "White Stone",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3099.234130859375, 85.29292297363281, -1198.850341796875)})
+            {CFrame = CFrame.new(-69.30982208251953, 38.51305389404297, 450.5069274902344)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -396,57 +381,36 @@ Tab2:AddToggle({Name = "White Stone",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3169.458251953125, 85.29292297363281, -1301.1630859375)
+                HumanoidRootPart.CFrame = CFrame.new(-51.26939392089844, 39.663421630859375, 425.5710144042969)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3207.85205078125, 85.29292297363281, -1301.4783935546875)
+                HumanoidRootPart.CFrame = CFrame.new(-66.40071868896484, 38.557960510253906, 469.778564453125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3164.994384765625, 85.42533874511719, -1240.3233642578125)
+                HumanoidRootPart.CFrame = CFrame.new(-92.4893798828125, 38.788429260253906, 503.6325988769531)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3153.42919921875, 85.45793151855469, -1226.7359619140625)
+                HumanoidRootPart.CFrame = CFrame.new(-108.41912841796875, 39.03948211669922, 435.2402038574219)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3102.98876953125, 85.29292297363281, -1216.4932861328125)
+                HumanoidRootPart.CFrame = CFrame.new(-172.05116271972656, 40.20874786376953, 484.7751770019531)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3183.752197265625, 85.29292297363281, -1207.04443359375)
+                HumanoidRootPart.CFrame = CFrame.new(-198.0983428955078, 39.03388214111328, 526.1689453125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3428.756103515625, 183.949951171875, -653.6953125)
+                HumanoidRootPart.CFrame = CFrame.new(-280.8353271484375, 39.18865966796875, 556.41357421875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3411.089111328125, 184.13104248046875, -610.7214965820312)
+                HumanoidRootPart.CFrame = CFrame.new(-346.2044982910156, 39.409767150878906, 605.179931640625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3395.1748046875, 183.94996643066406, -606.2634887695312)
+                HumanoidRootPart.CFrame = CFrame.new(-401.2690734863281, 39.195411682128906, 629.8668823242188)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3306.18798828125, 222.08462524414062, -472.84210205078125)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3155.642578125, 421.57598876953125, -451.5522155761719)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3194.03369140625, 421.57598876953125, -497.2698059082031)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3158.49755859375, 421.5759582519531, -562.2720947265625)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3195.85107421875, 421.5760498046875, -581.1619873046875)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3156.64697265625, 421.57598876953125, -608.5779418945312)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3183.817626953125, 421.70721435546875, -634.266845703125)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3163.494140625, 421.57598876953125, -663.3062133789062)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3203.003662109375, 421.5760498046875, -677.78759765625)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3197.263916015625, 421.5760498046875, -746.1566162109375)
+                HumanoidRootPart.CFrame = CFrame.new(-415.302734375, 39.18645477294922, 668.9577026367188)
                 wait(3)
             end
         end)
-        
-        _G.loop = true
-        while _G.loop do
-            wait()
+        local PickAxe = true  
+        while PickAxe do wait()
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
+            end
     end)
 else
 
-    _G.loop = false
+    PickAxe = false
     TweenRunning = true
 end
 end
@@ -463,7 +427,7 @@ Tab2:AddToggle({Name = "Rune Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3308.418701171875, 176.96286010742188, -810.0545043945312)})
+            {CFrame = CFrame.new(55.129642486572266, 35.783897399902344, 828.6396484375)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -473,48 +437,37 @@ Tab2:AddToggle({Name = "Rune Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3281.46923828125, 184.16616821289062, -739.4168090820312)
+                HumanoidRootPart.CFrame = CFrame.new(81.77721405029297, 36.264652252197266, 822.6876220703125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3257.8935546875, 184.0855255126953, -737.4698486328125)
+                HumanoidRootPart.CFrame = CFrame.new(4.722234725952148, 36.145389556884766, 818.7888793945312)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3267.503173828125, 183.949951171875, -724.87353515625)
+                HumanoidRootPart.CFrame = CFrame.new(-28.64539909362793, 36.93206787109375, 860.3737182617188)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3266.439453125, 183.949951171875, -600.0185546875)
+                HumanoidRootPart.CFrame = CFrame.new(-115.99430847167969, 36.562530517578125, 900.9732666015625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3256.823974609375, 184.20738220214844, -588.3638916015625)
+                HumanoidRootPart.CFrame = CFrame.new(-171.3794403076172, 36.269229888916016, 913.6370239257812)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3294.50390625, 183.949951171875, -598.29931640625)
+                HumanoidRootPart.CFrame = CFrame.new(-252.55679321289062, 36.51658248901367, 939.2569580078125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3248.90869140625, 221.949951171875, -444.7603454589844)
+                HumanoidRootPart.CFrame = CFrame.new(-308.1146545410156, 36.3888053894043, 938.2496337890625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3257.899169921875, 221.949951171875, -431.21917724609375)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3340.188232421875, 221.949951171875, -475.8669128417969)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3430.7080078125, 221.949951171875, -451.6587219238281)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3418.03759765625, 222.0907440185547, -441.7541198730469)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3406.74365234375, 221.949951171875, -427.1356506347656)
+                HumanoidRootPart.CFrame = CFrame.new(-330.0320739746094, 36.216060638427734, 910.8071899414062)
                 wait(3)
             end
         end)
         
-        _G.loop = true
-        while _G.loop do
-            wait()
+        local PickAxe = true  
+        while PickAxe do wait()
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
+            end
     end)
 else
 
-    _G.loop = false
+    PickAxe = false
     TweenRunning = true
 end
 end
 })
-
 -------------------------------------------------------------------------------------------------------------------------------------
 
 --- Gold Ore
@@ -526,7 +479,7 @@ Tab2:AddToggle({Name = "Gold Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3580.179443359375, -339.0193176269531, -513.0903930664062)})
+            {CFrame = CFrame.new(3974.349609375, -738.99169921875, 5730.9033203125)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -536,82 +489,23 @@ Tab2:AddToggle({Name = "Gold Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3568.652099609375, -339.5296936035156, -435.2101135253906)
+                HumanoidRootPart.CFrame = CFrame.new(3962.458251953125, -738.98486328125, 5714.64794921875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3557.9921875, -339.53167724609375, -458.1595764160156)
+                HumanoidRootPart.CFrame = CFrame.new(3966.2216796875, -738.6235961914062, 5740.9951171875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3574.17822265625, -339.539794921875, -551.9955444335938)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3558.1103515625, -339.30712890625, -588.9429931640625)
+                HumanoidRootPart.CFrame = CFrame.new(3988.898193359375, -738.985107421875, 5740.79052734375)
                 wait(3)
             end
         end)
         
-        _G.loop = true
-        while _G.loop do
-            wait()
+        local PickAxe = true  
+        while PickAxe do wait()
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
-    end)
-else
-
-    _G.loop = false
-    TweenRunning = true
-end
-end
-})
-
------------------------------------------------------------------------------------------------------------------------------------
-
---- Drangon Stone
-Tab2:AddToggle({Name = "Drangon Stone",Default = false,Callback = function(value)
-    Drangon = value
-        if value then
-            local TweenService = game:GetService("TweenService")
-            local Character = game.Players.LocalPlayer.Character
-            local HumanoidRootPart = Character.HumanoidRootPart
-        
-        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3590.274169921875, -339.0164794921875, -513.1459350585938)})
-        Tween1:Play()
-        Tween1.Completed:Connect(function()
-            TweenRunning = false
-        end)
-
-        Tween1.Completed:Connect(function()
-        wait(2)
-        spawn(function()
-            while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3647.266357421875, -339.53338623046875, -475.8580017089844)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3642.197998046875, -339.5342712402344, -486.45965576171875)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3652.566650390625, -339.5355529785156, -500.881103515625)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3651.892333984375, -339.53900146484375, -540.942626953125)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3659.215087890625, -339.54052734375, -558.1782836914062)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3576.99169921875, -339.54443359375, -605.329345703125)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3590.7158203125, -339.5334777832031, -478.2925109863281)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3585.3935546875, -339.282958984375, -441.4742431640625)
-                wait(3)
             end
-        end)
-        
-        _G.loop = true
-        while _G.loop do
-            wait()
-            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
     end)
 else
 
-    _G.loop = false
+    PickAxe = false
     TweenRunning = true
 end
 end
@@ -628,7 +522,7 @@ Tab2:AddToggle({Name = "Crystal Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3174.155029296875, 421.57598876953125, -532.0110473632812)})
+            {CFrame = CFrame.new(3715.572265625, -762.5343627929688, 5414.412109375)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -638,27 +532,23 @@ Tab2:AddToggle({Name = "Crystal Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3181.39453125, 421.57598876953125, -562.011474609375)
+                HumanoidRootPart.CFrame = CFrame.new(3716.40087890625, -758.3865356445312, 5398.45361328125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3509.86328125, 438.9498596191406, -676.9973754882812)
+                HumanoidRootPart.CFrame = CFrame.new(3691.34619140625, -758.3460083007812, 5415.5419921875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3239.185546875, 376.0263671875, -1150.364501953125)
-                wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3236.302978515625, 260.0061950683594, -1423.3037109375)
+                HumanoidRootPart.CFrame = CFrame.new(3741.0693359375, -758.5548706054688, 5410.548828125)
                 wait(3)
             end
         end)
         
-        _G.loop = true
-        while _G.loop do
-            wait()
+        local PickAxe = true  
+        while PickAxe do wait()
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
+            end
     end)
 else
 
-    _G.loop = false
+    PickAxe = false
     TweenRunning = true
 end
 end
@@ -675,7 +565,7 @@ Tab2:AddToggle({Name = "Stardust Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3580.855712890625, -339.0189208984375, -515.154541015625)})
+            {CFrame = CFrame.new(4434.9765625, -718.8471069335938, 5935.52099609375)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -685,31 +575,160 @@ Tab2:AddToggle({Name = "Stardust Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3503.60595703125, -339.6742248535156, -459.7414245605469)
+                HumanoidRootPart.CFrame = CFrame.new(4423.70166015625, -718.8588256835938, 5930.6494140625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3467.051025390625, -339.6742248535156, -469.66162109375)
+                HumanoidRootPart.CFrame = CFrame.new(4450.2255859375, -718.7822265625, 5999.75244140625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3495.773681640625, -339.6742248535156, -578.3414306640625)
+                HumanoidRootPart.CFrame = CFrame.new(4490.3818359375, -716.229248046875, 5994.5166015625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3186.53076171875, 421.57598876953125, -463.7036437988281)
+                HumanoidRootPart.CFrame = CFrame.new(4512.103515625, -718.8023071289062, 6067.017578125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3155.93310546875, 421.57598876953125, -537.44482421875)
+                HumanoidRootPart.CFrame = CFrame.new(4577.4404296875, -718.9923095703125, 6174.88525390625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3157.453125, 421.57598876953125, -723.3267822265625)
+                HumanoidRootPart.CFrame = CFrame.new(4551.10986328125, -718.2465209960938, 6199.99462890625)
                 wait(3)
             end
         end)
         
-        _G.loop = true
-        while _G.loop do
-            wait()
+        local PickAxe = true  
+        while PickAxe do wait()
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
-            wait(0.1)
-        end
+            end
     end)
 else
 
-    _G.loop = false
+    PickAxe = false
+    TweenRunning = true
+end
+end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+---Galaxy Ore
+Tab2:AddToggle({Name = "Galaxy Ore",Default = false,Callback = function(value)
+    Galaxy = value
+        if value then
+            local TweenService = game:GetService("TweenService")
+            local Character = game.Players.LocalPlayer.Character
+            local HumanoidRootPart = Character.HumanoidRootPart
+        
+        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+            {CFrame = CFrame.new(4434.9765625, -718.8471069335938, 5935.52099609375)})
+        Tween1:Play()
+        Tween1.Completed:Connect(function()
+            TweenRunning = false
+        end)
+
+        Tween1.Completed:Connect(function()
+        wait(2)
+        spawn(function()
+            while value and not TweenRunning do
+                HumanoidRootPart.CFrame = CFrame.new(4451.029296875, -716.109130859375, 5928.19970703125)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(4460.94921875, -716.5733642578125, 6086.16796875)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(4563.67138671875, -715.7063598632812, 6104.39306640625)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(4605.99853515625, -716.2992553710938, 6176.51708984375)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(4716.51708984375, -715.8817749023438, 6140.50927734375)
+                wait(3)
+            end
+        end)
+        
+        local PickAxe = true  
+        while PickAxe do wait()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
+            end
+    end)
+else
+
+    PickAxe = false
+    TweenRunning = true
+end
+end
+})
+------------------------------------------------------------------------------------------------------------------------------------
+
+---Crystalight Ore
+Tab2:AddToggle({Name = "Crystalight Ore",Default = false,Callback = function(value)
+    Crystalight = value
+        if value then
+            local TweenService = game:GetService("TweenService")
+            local Character = game.Players.LocalPlayer.Character
+            local HumanoidRootPart = Character.HumanoidRootPart
+        
+        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+            {CFrame = CFrame.new(4814.251953125, -778.5182495117188, 6515.0166015625)})
+        Tween1:Play()
+        Tween1.Completed:Connect(function()
+            TweenRunning = false
+        end)
+
+        Tween1.Completed:Connect(function()
+        wait(2)
+        spawn(function()
+            while value and not TweenRunning do
+                HumanoidRootPart.CFrame = CFrame.new(4754.69140625, -781.9938354492188, 6515.6728515625)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(4731.90673828125, -777.7952270507812, 6651.7734375)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(4812.9912109375, -777.02734375, 6606.39501953125)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(4833.13720703125, -768.9892578125, 6451.85595703125)
+                wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(4284.8544921875, -804.1765747070312, 6406.02880859375)
+                wait(3)
+            end
+        end)
+        
+        local PickAxe = true  
+        while PickAxe do wait()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
+            end
+    end)
+else
+
+    PickAxe = false
+    TweenRunning = true
+end
+end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+---Frenzy Ore
+Tab2:AddToggle({Name = "Frenzy Ore",Default = false,Callback = function(value)
+    Frenzy = value
+        if value then
+            local TweenService = game:GetService("TweenService")
+            local Character = game.Players.LocalPlayer.Character
+            local HumanoidRootPart = Character.HumanoidRootPart
+        
+        local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
+            {CFrame = CFrame.new(4814.251953125, -778.5182495117188, 6515.0166015625)})
+        Tween1:Play()
+        Tween1.Completed:Connect(function()
+            TweenRunning = false
+        end)
+
+        Tween1.Completed:Connect(function()
+        wait(2)
+        spawn(function()
+            while value and not TweenRunning do
+                HumanoidRootPart.CFrame = CFrame.new(4793.74365234375, -783.8568725585938, 6475.79638671875)
+            end
+        end)
+        
+        local PickAxe = true  
+        while PickAxe do wait()
+            game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
+            end
+    end)
+else
+
+    PickAxe = false
     TweenRunning = true
 end
 end
@@ -1530,7 +1549,7 @@ Tab4:AddToggle({
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
