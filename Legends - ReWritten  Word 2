@@ -952,7 +952,7 @@ local Mon = true
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1006,7 +1006,7 @@ local Mon = true
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1054,7 +1054,7 @@ local Mon = true
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1103,7 +1103,7 @@ local Mon = true
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1153,7 +1153,7 @@ Tab4:AddToggle({
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1203,7 +1203,7 @@ local Mon = true
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1252,7 +1252,7 @@ local Mon = true
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1301,7 +1301,7 @@ local Mon = true
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1335,7 +1335,7 @@ Tab4:AddToggle({
             local char = player.Character
             
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(4766.06494140625, 70.90894317626953, 6961.81298828125)})
+            {CFrame = CFrame.new(4995.75830078125, 163.1442108154297, 6773.8779296875)})
             Tw:Play()
             wait(5)
 
@@ -1351,7 +1351,7 @@ Tab4:AddToggle({
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1401,7 +1401,7 @@ Tab4:AddToggle({
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1450,7 +1450,7 @@ Tab4:AddToggle({
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
@@ -1500,7 +1500,7 @@ Tab4:AddToggle({
                 end)
                     wait(10)
                     BowAttack = false
-                    wait(5)
+                    wait(2)
                     BowAttack = true
                 end
             end
