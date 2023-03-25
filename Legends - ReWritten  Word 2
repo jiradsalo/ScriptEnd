@@ -869,37 +869,37 @@ local Section = Tab4:AddSection({
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-4521.52001953125, 20.19076919555664, 1641.5771484375)})
             Tw:Play()
             wait(10)
             
-            local Tw1 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw1 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-5994.1201171875, 1852.655029296875, 4024.04638671875)})
             Tw1:Play()
             wait(10)
             
-            local Tw2 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw2 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-1946.349853515625, 263.85894775390625, 5111.33935546875)})
             Tw2:Play()
             wait(10)
             
-            local Tw3 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw3 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(117.33790588378906, 935.1010131835938, 3119.712158203125)})
             Tw3:Play()
             wait(10)
             
-            local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(8.344050407409668, 19.95615005493164, 8244.5107421875)})
             Tw4:Play()
             wait(10)
             
-            local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(4253.72314453125, -155.29238891601562, 6427.59765625)})
             Tw4:Play()
             wait(10)
             
-            local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(39.280555725097656, 19.469913482666016, -248.6748046875)})
             Tw4:Play()
             wait(10)
@@ -940,10 +940,51 @@ local Mon = true
             Tw:Play()
             wait(5)
 
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                    
+                 spawn(function()
+                    while BowAttack do wait()
+                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    end
+                 end)
+                    wait(5)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
+                end
+            end
+            wait()
+                end
+
+    end
+    Mon = false
+end
+})
+
+local MobName = {"IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Raid Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
         while Mon do
             for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,20)}):Play()
+                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") then
                     
 
                  spawn(function()
@@ -951,7 +992,10 @@ local Mon = true
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
                     end
                  end)
-                wait(2)
+                    wait(5)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
                 end
             end
             wait()
@@ -960,6 +1004,8 @@ local Mon = true
     Mon = false
 end
 })
+
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -987,21 +1033,28 @@ local Mon = true
             Tw:Play()
             wait(5)
                         
-        while Mon do
-            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,20)}):Play()
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                    spawn(function()
+                        while Mon do
+                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
+                        end
+                    end)
                     
-
-                 spawn(function()
-                    while BowAttack do wait()
+                spawn(function()
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    wait(0.1)
                     end
-                 end)
-                wait(2)
+                end)
+                    wait(10)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
                 end
             end
-            wait()
+            wait(2)
         end
     end
     Mon = false
@@ -1033,18 +1086,20 @@ local Mon = true
             Tw:Play()
             wait(5)
             
-        while Mon do
-            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,20)}):Play()
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
-
-                 spawn(function()
-                    while BowAttack do wait()
+                spawn(function()
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    wait(0.1)
                     end
-                 end)
-                wait(2)
+                end)
+                    wait(10)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
                 end
             end
             wait()
@@ -1080,18 +1135,20 @@ local Mon = true
             Tw:Play()
             wait(5)
 
-        while Mon do
-            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,20)}):Play()
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
-
-                 spawn(function()
-                    while BowAttack do wait()
+                spawn(function()
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    wait(0.1)
                     end
-                 end)
-                wait(2)
+                end)
+                    wait(10)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
                 end
             end
             wait()
@@ -1128,18 +1185,20 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
             
-        while Mon do
-            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,20)}):Play()
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
-
-                 spawn(function()
-                    while BowAttack do wait()
+                spawn(function()
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    wait(0.1)
                     end
-                 end)
-                wait(2)
+                end)
+                    wait(10)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
                 end
             end
             wait()
@@ -1176,28 +1235,43 @@ local Mon = true
             Tw:Play()
             wait(5)
 
-                while Mon do
+           while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while BowAttack do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+                            BowAttack = true
+                            spawn(function()
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do
+                                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                                    wait(0.1)
+                                end
+                            wait(30)
+                            BowAttack = false
+                            wait(5)
+                            BowAttack = true
+                            end)
+
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
+                                    {CFrame = v.HumanoidRootPart.CFrame})
+                                    Tw:Play()
+                            wait(8)
+                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+                                    {CFrame = CFrame.new(4464.462890625, -681.4097900390625, 6409.998046875)})
+                                    Tw2:Play()
+                            wait(2)
+                        end
                     end
-                end)
-                    wait(10)
-                    BowAttack = false
-                    wait(2)
-                    BowAttack = true
                 end
+                wait()
             end
-            wait()
+            Mon = false
         end
     end
-    Mon = false
-end
 })
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1225,18 +1299,20 @@ local Mon = true
             Tw:Play()
             wait(5)
 
-        while Mon do
-            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,20)}):Play()
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
-
-                 spawn(function()
-                    while BowAttack do wait()
+                spawn(function()
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    wait(0.1)
                     end
-                 end)
-                wait(2)
+                end)
+                    wait(10)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
                 end
             end
             wait()
@@ -1272,28 +1348,43 @@ local Mon = true
             Tw:Play()
             wait(5)
 
-                while Mon do
+           while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while BowAttack do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+                            BowAttack = true
+                            spawn(function()
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do
+                                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                                    wait(0.1)
+                                end
+                            wait(30)
+                            BowAttack = false
+                            wait(5)
+                            BowAttack = true
+                            end)
+
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
+                                    {CFrame = v.HumanoidRootPart.CFrame})
+                                    Tw:Play()
+                            wait(8)
+                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+                                    {CFrame = CFrame.new(-6193.55029296875, 1838.0281982421875, 4058.882568359375)})
+                                    Tw2:Play()
+                            wait(2)
+                        end
                     end
-                end)
-                    wait(10)
-                    BowAttack = false
-                    wait(2)
-                    BowAttack = true
                 end
+                wait()
             end
-            wait()
+            Mon = false
         end
     end
-    Mon = false
-end
 })
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1322,27 +1413,41 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while Mon do
+           while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while BowAttack do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+                            BowAttack = true
+                            spawn(function()
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do
+                                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                                    wait(0.1)
+                                end
+                            wait(30)
+                            BowAttack = false
+                            wait(5)
+                            BowAttack = true
+                            end)
+
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
+                                    {CFrame = v.HumanoidRootPart.CFrame})
+                                    Tw:Play()
+                            wait(8)
+                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+                                    {CFrame = CFrame.new(4995.75830078125, 163.1442108154297, 6773.8779296875)})
+                                    Tw2:Play()
+                            wait(2)
+                        end
                     end
-                end)
-                    wait(10)
-                    BowAttack = false
-                    wait(2)
-                    BowAttack = true
                 end
+                wait()
             end
-            wait()
+            Mon = false
         end
     end
-    Mon = false
-end
 })
 
 
@@ -1357,43 +1462,54 @@ Tab4:AddToggle({
     Name = "Law Level:450",
     Default = false,
     Callback = function(value)
-            Mon = value
-            if Mon then
-                
+        Mon = value
+        if Mon then
             local tweenService = game:GetService("TweenService")
-            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose = game:GetService("TweenService")
-            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(944.6262817382812, 19.46990966796875, -554.6542358398438)})
+            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
+                {CFrame = CFrame.new(944.6262817382812, 19.46990966796875, -554.6542358398438)})
             Tw:Play()
-            wait(5)
-
-                while Mon do
+            
+           while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while BowAttack do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+                            
+                            BowAttack = true
+                            spawn(function()
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do
+                                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                                    wait(0.1)
+                                end
+                            wait(30)
+                            BowAttack = false
+                            wait(5)
+                            BowAttack = true
+                            end)
+                            
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
+                                    {CFrame = v.HumanoidRootPart.CFrame})
+                                    Tw:Play()
+                            wait(8)
+                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+                                    {CFrame = CFrame.new(944.6262817382812, 19.46990966796875, -554.6542358398438)})
+                                    Tw2:Play()
+                            wait(2)
+                        end
                     end
-                end)
-                    wait(10)
-                    BowAttack = false
-                    wait(2)
-                    BowAttack = true
                 end
+                wait()
             end
-            wait()
+            Mon = false
         end
     end
-    Mon = false
-end
 })
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1421,18 +1537,20 @@ Tab4:AddToggle({
             Tw:Play()
             wait(1)
 
-        while Mon do
-            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
-                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,20)}):Play()
+                while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                     
-
-                 spawn(function()
-                    while BowAttack do wait()
+                spawn(function()
+                    while BowAttack do
                     char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                    wait(0.1)
                     end
-                 end)
-                wait(2)
+                end)
+                    wait(10)
+                    BowAttack = false
+                    wait(2)
+                    BowAttack = true
                 end
             end
             wait()
@@ -1469,27 +1587,41 @@ Tab4:AddToggle({
             Tw:Play()
             wait(5)
 
-                while Mon do
+           while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while BowAttack do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+                            BowAttack = true
+                            spawn(function()
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do
+                                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                                    wait(0.1)
+                                end
+                            wait(30)
+                            BowAttack = false
+                            wait(5)
+                            BowAttack = true
+                            end)
+
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
+                                    {CFrame = v.HumanoidRootPart.CFrame})
+                                    Tw:Play()
+                            wait(8)
+                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+                                    {CFrame = CFrame.new(-1629.2760009765625, 354.9918518066406, 4789.28857421875)})
+                                    Tw2:Play()
+                            wait(2)
+                        end
                     end
-                end)
-                    wait(10)
-                    BowAttack = false
-                    wait(2)
-                    BowAttack = true
                 end
+                wait()
             end
-            wait()
+            Mon = false
         end
     end
-    Mon = false
-end
 })
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -1498,7 +1630,7 @@ end
 local MobName = "Nightmare"
 local BowAttack = true
 local Mon = true
-
+local Bow = true
 Tab4:AddToggle({
     Name = "Nightmare Level:500",
     Default = false,
@@ -1516,30 +1648,45 @@ Tab4:AddToggle({
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(467.154296875, 901.2927856445312, 2513.03515625)})
             Tw:Play()
-            wait(5)
-
-                while Mon do
+            
+           while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    
-                spawn(function()
-                    while BowAttack do
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    wait(0.1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            BowAttack = true
+                            spawn(function()
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do
+                                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
+                                    wait(0.1)
+                                end
+                            wait(30)
+                            BowAttack = false
+                            wait(5)
+                            BowAttack = true
+                            end)
+
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
+                                    {CFrame = v.HumanoidRootPart.CFrame})
+                                    Tw:Play()
+                            wait(8)
+                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+                                    {CFrame = CFrame.new(467.154296875, 901.2927856445312, 2513.03515625)})
+                                    Tw2:Play()
+                            wait(2)
+                        end
                     end
-                end)
-                    wait(10)
-                    BowAttack = false
-                    wait(2)
-                    BowAttack = true
                 end
+                wait()
             end
-            wait()
+            Mon = false
         end
     end
-    Mon = false
-end
 })
+
 ----------------------------------------------------------------------------------------------------------------------------------------------
 --
 ---
