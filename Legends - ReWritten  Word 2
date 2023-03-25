@@ -899,7 +899,7 @@ local Section = Tab4:AddSection({
             Tw4:Play()
             wait(10)
             
-            local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw4 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(39.280555725097656, 19.469913482666016, -248.6748046875)})
             Tw4:Play()
             wait(10)
@@ -962,50 +962,6 @@ local Mon = true
     Mon = false
 end
 })
-
-local MobName = {"IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard"
-    }
-local BowAttack = true
-local Mon = true
-
-    Tab3:AddToggle({
-        Name = "Raid Boss",
-        Default = false,
-        Callback = function(value)
-            Mon = value
-            if Mon then
-    
-        local tweenService = game:GetService("TweenService")
-        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
-        local tweenServiceClose = game:GetService("TweenService")
-        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-        local player = game:GetService("Players").LocalPlayer
-        local char = player.Character
-
-        while Mon do
-            for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") then
-                    
-
-                 spawn(function()
-                    while BowAttack do wait()
-                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                    end
-                 end)
-                    wait(5)
-                    BowAttack = false
-                    wait(2)
-                    BowAttack = true
-                end
-            end
-            wait()
-        end
-    end
-    Mon = false
-end
-})
-
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
