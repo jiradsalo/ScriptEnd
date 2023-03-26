@@ -1553,29 +1553,6 @@ Tab4:AddToggle({
 
 ------------------------------------------------------------------------------------------------------------------
 
-local MobName = "Gilgamesh"
-
-for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value == 0 then
-        wait(10)
-        Rejoin = true
-    end
-end
-
-------------------------------------------------------------------------------------------------------------------
-
-local MobName = "Blackbeard"
-
-for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value == 0 then
-        wait(10)
-        Rejoin = true
-    end
-end
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 local Rejoin = false
 Tab4:AddButton({
     Name = "Rejoin",
