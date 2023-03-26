@@ -935,15 +935,6 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-                while Mon do
-                    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
-                        if v.ClassName == "Tool" and v.Name == "Bow" then 
-                            v.Parent = game.Players.LocalPlayer.Character
-                        end
-                    end
-                wait(5)
-                end
-                
             local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375)})
             Tw:Play()
@@ -951,6 +942,13 @@ local Mon = true
             
             game:GetService("ReplicatedStorage").Remotes.UpdateSpawnPoint:FireServer()
             
+            while Mon do
+            for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+                if v.ClassName == "Tool" and v.Name == "Bow" then 
+                    v.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+            end
 
                 while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -975,6 +973,9 @@ local Mon = true
 end
 })
 
+
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---Ronin Level:110 : Level:120
@@ -995,23 +996,22 @@ local Mon = true
                 local tweenInfoClose = TweenInfo.new(1, Enum.EasingStyle.Linear)
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
-                
-                while Mon do
-                    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
-                        if v.ClassName == "Tool" and v.Name == "Bow" then 
-                            v.Parent = game.Players.LocalPlayer.Character
-                        end
-                    end
-                wait(5)
-                end
         
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 80}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 80}),
             {CFrame = CFrame.new(493.67132568359375, 52.956661224365234, -406.1116943359375)})
             Tw:Play()
             wait(5)
                         
             game:GetService("ReplicatedStorage").Remotes.UpdateSpawnPoint:FireServer()
             
+            while Mon do
+            for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+                if v.ClassName == "Tool" and v.Name == "Bow" then 
+                    v.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+            end
+
                 while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                 if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
@@ -1055,21 +1055,20 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-                while Mon do
-                    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
-                        if v.ClassName == "Tool" and v.Name == "Bow" then 
-                            v.Parent = game.Players.LocalPlayer.Character
-                        end
-                    end
-                wait(5)
-                end
-                
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(957.087890625, -225.63125610351562, -428.025390625)})
             Tw:Play()
             wait(5)
             
             game:GetService("ReplicatedStorage").Remotes.UpdateSpawnPoint:FireServer()
+            
+            while Mon do
+            for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+                if v.ClassName == "Tool" and v.Name == "Bow" then 
+                    v.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+            end
 
                 while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1115,16 +1114,7 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-                while Mon do
-                    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
-                        if v.ClassName == "Tool" and v.Name == "Bow" then 
-                            v.Parent = game.Players.LocalPlayer.Character
-                        end
-                    end
-                wait(5)
-                end
-                
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-4239.0712890625, -339.6741943359375, -539.2049560546875)})
             Tw:Play()
             wait(5)
@@ -1184,7 +1174,7 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(863.7012329101562, 98.45106506347656, 3254.254150390625)})
             Tw:Play()
             wait(5)
@@ -1242,11 +1232,11 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(4464.462890625, -681.4097900390625, 6409.998046875)})
             Tw:Play()
-            wait(1)
-            
+            wait(5)
+
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                     if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
@@ -1306,10 +1296,10 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-48.32590103149414, 29.16637420654297, 8419.5947265625)})
             Tw:Play()
-            wait(1)
+            wait(5)
 
                 while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1355,10 +1345,10 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-6193.55029296875, 1838.0281982421875, 4058.882568359375)})
             Tw:Play()
-            wait(1)
+            wait(5)
 
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1384,12 +1374,6 @@ local Mon = true
                                     {CFrame = v.HumanoidRootPart.CFrame})
                                     Tw:Play()
                             wait(8)
-                            
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-6519.73681640625, 1640.76953125, 4022.1083984375)})
-                                    Tw2:Play()
-                            wait(8)
-                            
                             local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
                                     {CFrame = CFrame.new(-6193.55029296875, 1838.0281982421875, 4058.882568359375)})
                                     Tw2:Play()
@@ -1409,7 +1393,7 @@ local Mon = true
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---Chain User Level:445
-local MobName = "ChainUser"
+local MobName = "Chain User"
 local BowAttack = true
 local Mon = true
 
@@ -1427,10 +1411,10 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(4995.75830078125, 163.1442108154297, 6773.8779296875)})
             Tw:Play()
-            wait(1)
+            wait(5)
 
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1487,11 +1471,10 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
+            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
                 {CFrame = CFrame.new(944.6262817382812, 19.46990966796875, -554.6542358398438)})
             Tw:Play()
-            wait(1)
-
+            
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                     if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
@@ -1607,10 +1590,10 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(-1629.2760009765625, 354.9918518066406, 4789.28857421875)})
             Tw:Play()
-            wait(1)
+            wait(5)
 
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1669,10 +1652,9 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
             {CFrame = CFrame.new(467.154296875, 901.2927856445312, 2513.03515625)})
             Tw:Play()
-            wait(1)
             
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
