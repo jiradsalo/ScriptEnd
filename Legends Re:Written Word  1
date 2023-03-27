@@ -205,14 +205,24 @@ Tab2:AddToggle({Name = "Bronz Ore",Default = false,Callback = function(value)
                 wait(2)
                 spawn(function()
                     while value and not TweenRunning do
-                        HumanoidRootPart.CFrame = CFrame.new(-2807.071044921875, -5.0501203536987305, -707.8900146484375)
+                        HumanoidRootPart.CFrame = CFrame.new(-2806.59375, -5.050121307373047, -707.5731201171875)
                         wait(3)
-                        HumanoidRootPart.CFrame = CFrame.new(-2784.137939453125, -4.892110824584961, -948.5869140625)
+                        HumanoidRootPart.CFrame = CFrame.new(-2781.3564453125, -5.050136566162109, -945.8433227539062)
                         wait(3)
-                        HumanoidRootPart.CFrame = CFrame.new(-2964.209716796875, 49.29293441772461, -1290.026123046875)
+                        HumanoidRootPart.CFrame = CFrame.new(-2928.009765625, 48.94988250732422, -1014.3327026367188)
+                        wait(0.1)
+                        HumanoidRootPart.CFrame = CFrame.new(-2935.64501953125, 48.940521240234375, -1165.3265380859375)
+                        wait(0.1)
+                        HumanoidRootPart.CFrame = CFrame.new(-2963.554443359375, 49.292938232421875, -1290.8770751953125)
                         wait(3)
-                        HumanoidRootPart.CFrame = CFrame.new(-2972.51220703125, 49.292945861816406, -1310.7652587890625)
+                        HumanoidRootPart.CFrame = CFrame.new(-2972.076416015625, 49.475257873535156, -1310.5716552734375)
                         wait(3)
+                        HumanoidRootPart.CFrame = CFrame.new(-2935.64501953125, 48.940521240234375, -1165.3265380859375)
+                        wait(0.1)
+                        HumanoidRootPart.CFrame = CFrame.new(-2928.009765625, 48.94988250732422, -1014.3327026367188)
+                        wait(0.1)
+                        HumanoidRootPart.CFrame = CFrame.new(-2765.198486328125, -5.055056571960449, -940.6439208984375)
+                        wait(0.1)
                     end
                 end)
 
@@ -258,10 +268,24 @@ Tab2:AddToggle({Name = "Iron Ore",Default = false,Callback = function(value)
                 wait(3)
                 HumanoidRootPart.CFrame = CFrame.new(-2789.075927734375, -5.050135612487793, -816.5828247070312)
                 wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-2779.756103515625, 10.949832916259766, -1007.5390014648438)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2932.838623046875, 48.964027404785156, -1040.5543212890625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2935.35546875, 48.94052505493164, -1161.1884765625)
+                wait(0.1)
                 HumanoidRootPart.CFrame = CFrame.new(-2933.595703125, 49.292930603027344, -1281.5654296875)
                 wait(3)
                 HumanoidRootPart.CFrame = CFrame.new(-2943.90283203125, 49.292938232421875, -1268.3062744140625)
                 wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-2935.35546875, 48.94052505493164, -1161.1884765625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2932.838623046875, 48.964027404785156, -1040.5543212890625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2779.756103515625, 10.949832916259766, -1007.5390014648438)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2762.60595703125, -5.050135612487793, -850.849853515625)
+                wait(0.1)
             end
         end)
         
@@ -307,6 +331,12 @@ local Toggle = Tab2:AddToggle({Name = "Black Ore",Default = false,Callback = fun
                 wait(3)
                 HumanoidRootPart.CFrame = CFrame.new(-2793.265869140625, -4.820427894592285, -929.928955078125)
                 wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-2830.615966796875, 22.023012161254883, -1005.3585205078125)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2938.755615234375, 48.94141387939453, -1036.996337890625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2935.646728515625, 48.94052505493164, -1161.939697265625)
+                wait(0.1)
                 HumanoidRootPart.CFrame = CFrame.new(-3067.595703125, 49.457305908203125, -1207.854248046875)
                 wait(3)
                 HumanoidRootPart.CFrame = CFrame.new(-3086.83642578125, 49.67255401611328, -1225.5244140625)
@@ -315,10 +345,24 @@ local Toggle = Tab2:AddToggle({Name = "Black Ore",Default = false,Callback = fun
                 wait(3)
                 HumanoidRootPart.CFrame = CFrame.new(-3111.964599609375, 85.29292297363281, -1309.2928466796875)
                 wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3183.599853515625, 85.29292297363281, -1298.1099853515625)
+                wait(0.1)
                 HumanoidRootPart.CFrame = CFrame.new(-3260.909912109375, 85.33395385742188, -1309.351806640625)
                 wait(3)
                 HumanoidRootPart.CFrame = CFrame.new(-3242.468017578125, 85.29292297363281, -1316.909423828125)
                 wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3183.599853515625, 85.29292297363281, -1298.1099853515625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3000.619873046875, 49.29293441772461, -1226.2496337890625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2937.18017578125, 48.940528869628906, -1146.7958984375)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2935.8173828125, 48.949886322021484, -1022.0823974609375)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2775.947021484375, 10.949831008911133, -1006.0912475585938)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-2761.585205078125, -5.050135612487793, -861.2542114257812)
+                wait(0.1)
             end
         end)
         
@@ -328,12 +372,12 @@ local Toggle = Tab2:AddToggle({Name = "Black Ore",Default = false,Callback = fun
             game:GetService("Players").LocalPlayer.Character.PickAxe.SwordScript.Activate:FireServer()
             wait(0.1)
         end
-    end)
-else
+        end)
+        else
+        _G.loop = false
+        TweenRunning = true
+        end
 
-    _G.loop = false
-    TweenRunning = true
-end
 end
 })
 
@@ -348,7 +392,7 @@ Tab2:AddToggle({Name = "Adamant Ore",Default = false,Callback = function(value)
             local HumanoidRootPart = Character.HumanoidRootPart
         
         local Tween1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 200}),
-            {CFrame = CFrame.new(-3099.234130859375, 85.29292297363281, -1198.850341796875)})
+            {CFrame = CFrame.new(-3081.78662109375, 86.29212188720703, -1270.66748046875)})
         Tween1:Play()
         Tween1.Completed:Connect(function()
             TweenRunning = false
@@ -358,30 +402,57 @@ Tab2:AddToggle({Name = "Adamant Ore",Default = false,Callback = function(value)
         wait(2)
         spawn(function()
             while value and not TweenRunning do
-                HumanoidRootPart.CFrame = CFrame.new(-3106.1630859375, 85.29292297363281, -1316.1104736328125)
+                HumanoidRootPart.CFrame = CFrame.new(-3106.33544921875, 85.29292297363281, -1316.1336669921875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3134.091796875, 85.29292297363281, -1305.6103515625)
+                HumanoidRootPart.CFrame = CFrame.new(-3131.193603515625, 85.29292297363281, -1309.0670166015625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3187.031982421875, 85.29292297363281, -1305.5703125)
+                HumanoidRootPart.CFrame = CFrame.new(-3184.109130859375, 85.29292297363281, -1308.1102294921875) 
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3110.46826171875, 85.49807739257812, -1185.5902099609375)
+                HumanoidRootPart.CFrame = CFrame.new(-3217.0810546875, 85.29292297363281, -1257.5010986328125)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3187.5205078125, 85.29292297363281, -1209.6781005859375)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3125.274658203125, 85.29292297363281, -1199.0701904296875)
+                HumanoidRootPart.CFrame = CFrame.new(-3131.3056640625, 85.48383331298828, -1198.9384765625)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3183.752197265625, 85.29292297363281, -1207.04443359375)
+                HumanoidRootPart.CFrame = CFrame.new(-3113.269287109375, 85.42033386230469, -1188.07763671875) 
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3246.542236328125, 183.949951171875, -674.6106567382812)
+                HumanoidRootPart.CFrame = CFrame.new(-3231.34228515625, 91.34717559814453, -1230.888427734375)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3309.731201171875, 131.16928100585938, -1079.10400390625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3310.267333984375, 174.9498291015625, -889.013916015625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3309.4619140625, 182.56185913085938, -781.275146484375)
+                wait(0.1)
+
+                HumanoidRootPart.CFrame = CFrame.new(-3246.2939453125, 183.949951171875, -680.8094482421875)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3254.12841796875, 183.949951171875, -674.9178466796875)
+                HumanoidRootPart.CFrame = CFrame.new(-3257.394287109375, 183.949951171875, -678.3194580078125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3249.0263671875, 183.949951171875, -667.6703491210938)
+                HumanoidRootPart.CFrame = CFrame.new(-3248.93408203125, 183.949951171875, -667.9052124023438)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3260.558349609375, 221.949951171875, -518.5996704101562)
+                HumanoidRootPart.CFrame = CFrame.new(-3280.36181640625, 204.496337890625, -580.5853271484375)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3247.177490234375, 221.949951171875, -518.1920776367188)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3247.259033203125, 221.949951171875, -518.2675170898438)
+                HumanoidRootPart.CFrame = CFrame.new(-3263.955810546875, 221.949951171875, -521.2725830078125)
                 wait(3)
-                HumanoidRootPart.CFrame = CFrame.new(-3250.845458984375, 221.949951171875, -504.1876220703125)
+                HumanoidRootPart.CFrame = CFrame.new(-3250.577392578125, 222.0623016357422, -503.7571716308594)
                 wait(3)
+                HumanoidRootPart.CFrame = CFrame.new(-3280.36181640625, 204.496337890625, -580.5853271484375)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3298.279296875, 183.949951171875, -707.1314086914062)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3309.4619140625, 182.56185913085938, -781.275146484375)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3310.267333984375, 174.9498291015625, -889.013916015625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3309.731201171875, 131.16928100585938, -1079.10400390625)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3231.34228515625, 91.34717559814453, -1230.888427734375)
+                wait(0.1)
+                HumanoidRootPart.CFrame = CFrame.new(-3200.07373046875, 85.3583984375, -1234.12548828125)
+                wait(0.1)
             end
         end)
         
@@ -930,8 +1001,11 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375)})
+            local distance = (CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375)})
             Tw:Play()
             wait(5)
 
@@ -955,18 +1029,28 @@ local Mon = true
                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-4064.499267578125, 398.9500427246094, -858.9842529296875)})
-                                    Tw2:Play()
-                            wait(8)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375)})
-                                    Tw2:Play()
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+
+                            local distance = (CFrame.new(-4064.499267578125, 398.9500427246094, -858.9842529296875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw2 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-4064.499267578125, 398.9500427246094, -858.9842529296875)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), {CFrame = CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1002,8 +1086,11 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
         
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 80}),
-            {CFrame = CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531)})
+            local distance = (CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531)})
             Tw:Play()
             wait(5)
                         
@@ -1027,18 +1114,28 @@ local Mon = true
                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-967.48291015625, 295.2413635253906, -95.48004913330078)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(-967.48291015625, 295.2413635253906, -95.48004913330078).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-967.48291015625, 295.2413635253906, -95.48004913330078)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1071,10 +1168,13 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125)})
-            Tw:Play()
-            wait(5)
+                local distance = (CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125)})
+                Tw:Play()
+                wait(5)
             
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1096,18 +1196,28 @@ local Mon = true
                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(921.2429809570312, -225.63125610351562, -464.650634765625)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(921.2429809570312, -225.63125610351562, -464.650634765625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(921.2429809570312, -225.63125610351562, -464.650634765625)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1140,10 +1250,13 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312)})
-            Tw:Play()
-            wait(5)
+                local distance = (CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312)})
+                Tw:Play()
+                wait(5)
 
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1165,18 +1278,28 @@ local Mon = true
                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1187,6 +1310,7 @@ local Mon = true
         end
     end
 })
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1209,8 +1333,11 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312)})
+            local distance = (CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312)})
             Tw:Play()
             wait(5)
 
@@ -1234,18 +1361,28 @@ Tab4:AddToggle({
                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-3545.15283203125, -339.079833984375, -1076.691162109375)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1278,10 +1415,13 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125)})
-            Tw:Play()
-            wait(5)
+                local distance = (CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125)})
+                Tw:Play()
+                wait(5)
 
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1300,21 +1440,31 @@ local Mon = true
                             BowAttack = true
                             end)
 
-                            repeat wait() until v.Humanoid.Health <= 0
+                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-2899.255859375, 332.9498291015625, -865.3580932617188)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(-2899.255859375, 332.9498291015625, -865.3580932617188).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-2899.255859375, 332.9498291015625, -865.3580932617188)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1346,10 +1496,13 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875)})
-            Tw:Play()
-            wait(5)
+                local distance = (CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875)})
+                Tw:Play()
+                wait(5)
 
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1368,21 +1521,31 @@ local Mon = true
                             BowAttack = true
                             end)
 
-                            repeat wait() until v.Humanoid.Health <= 0
+                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-3046.301513671875, -336.8670654296875, -1549.7684326171875)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(-3046.301513671875, -336.8670654296875, -1549.7684326171875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3046.301513671875, -336.8670654296875, -1549.7684326171875)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1415,10 +1578,13 @@ local Mon = true
                 local player = game:GetService("Players").LocalPlayer
                 local char = player.Character
                 
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906)})
-            Tw:Play()
-            wait(5)
+                local distance = (CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906)})
+                Tw:Play()
+                wait(5)
 
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
@@ -1437,21 +1603,31 @@ local Mon = true
                             BowAttack = true
                             end)
 
-                            repeat wait() until v.Humanoid.Health <= 0
+                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(152.73670959472656, 5.273518085479736, -509.7655944824219)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(152.73670959472656, 5.273518085479736, -509.7655944824219).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(152.73670959472656, 5.273518085479736, -509.7655944824219)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1484,30 +1660,19 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688)})
+            local distance = (CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688)})
             Tw:Play()
             wait(5)
             
-            if Mon then
-                while true do
-                    for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                        if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                        local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                            {CFrame = v.HumanoidRootPart.CFrame})
-                            Tw:Play()
-                            wait(1)
-                        end
-                    end
-                        wait(1)
-                end
-            end
-
-           while Mon do
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                     if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                         if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
-                        
+                    if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
                            
                             BowAttack = true
                             spawn(function()
@@ -1521,17 +1686,29 @@ Tab4:AddToggle({
                             BowAttack = true
                             end)
 
-                            repeat wait() until v.Humanoid.Health <= 0
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+
+                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688)})
+                            Tw:Play()
+                            wait(2)
                         end
                     end
                 end
@@ -1539,7 +1716,8 @@ Tab4:AddToggle({
             end
             Mon = false
         end
-    end
+        end
+end
 })
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -1563,8 +1741,11 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375)})
+            local distance = (CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375)})
             Tw:Play()
             wait(5)
 
@@ -1585,21 +1766,31 @@ Tab4:AddToggle({
                             BowAttack = true
                             end)
 
-                            repeat wait() until v.Humanoid.Health <= 0
+                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-1065.4139404296875, 42.86543655395508, -1835.20703125)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(-1065.4139404296875, 42.86543655395508, -1835.20703125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-1065.4139404296875, 42.86543655395508, -1835.20703125)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1632,8 +1823,11 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625)})
+            local distance = (CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625)})
             Tw:Play()
             wait(5)
 
@@ -1654,21 +1848,31 @@ Tab4:AddToggle({
                             BowAttack = true
                             end)
 
-                            repeat wait() until v.Humanoid.Health <= 0
+                              repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(467.154296875, 901.2927856445312, 2513.03515625)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1701,18 +1905,20 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375)})
+            local distance = (CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375)})
             Tw:Play()
-            wait(6)
+            wait(5)
             
-           while Mon do
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                     if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
                         if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
-                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                        wait(1)
-
+                    if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+                           
                             BowAttack = true
                             spawn(function()
                                 while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do
@@ -1725,41 +1931,28 @@ Tab4:AddToggle({
                             BowAttack = true
                             end)
 
-                while Mon do
-                for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
-                    if string.match(v.Name, MobName1) and v:FindFirstChild("HumanoidRootPart") then
-                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-         
-                            BowAttack = true
-                            spawn(function()
-                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do
-                                    char.Bow.SwordScript.Shoot:FireServer(v.HumanoidRootPart.Position, 21)
-                                    wait(0.1)
-                                end
-                            wait(30)
-                            BowAttack = false
-                            wait(5)
-                            BowAttack = true
-                            end)
-                            
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
                             end
-                        end
-                    end
-                wait()
-            end
-  
-                            repeat wait() until v.Humanoid.Health <= 0
+
+                             repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375)})
-                                    Tw2:Play()
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1768,7 +1961,8 @@ Tab4:AddToggle({
             end
             Mon = false
         end
-    end
+        end
+end
 })
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -1792,8 +1986,11 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-            {CFrame = CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281)})
+            local distance = (CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281)})
             Tw:Play()
             wait(5)
 
@@ -1814,21 +2011,31 @@ Tab4:AddToggle({
                             BowAttack = true
                             end)
 
-                            repeat wait() until v.Humanoid.Health <= 0
+                              repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-2600.0263671875, -339.6741638183594, -434.7408447265625)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(-2600.0263671875, -339.6741638183594, -434.7408447265625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-2600.0263671875, -339.6741638183594, -434.7408447265625)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -1860,11 +2067,14 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
             
-            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 80}),
-            {CFrame = CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125)})
+            local distance = (CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125)})
             Tw:Play()
             wait(5)
-                        
+
            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
                     if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
@@ -1882,21 +2092,31 @@ Tab4:AddToggle({
                             BowAttack = true
                             end)
 
-                            repeat wait() until v.Humanoid.Health <= 0
+                              repeat wait() until v.Humanoid.Health <= 0
                             BowAttack = false
                             wait(1)
-                            local Tw = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}), 
-                                    {CFrame = v.HumanoidRootPart.CFrame})
-                                    Tw:Play()
-                            wait(8)
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625)})
-                                    Tw2:Play()
-                            wait(8)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
                             
-                            local Tw2 = tweenService:Create(char.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0, {Speed = 130}),
-                                    {CFrame = CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125)})
-                                    Tw2:Play()
+                            local distance = (CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125)})
+                            Tw:Play()
                             wait(2)
                         end
                     end
@@ -2154,14 +2374,16 @@ end
 ----------------------------------------------------------------------------------------------------------------
 ---DualSwords Boar King Level:40
 local MobName = "BoarMan"
+local BowAttack = false
+local Mon = false
 
     local BoarManMob = true
     Tab4:AddToggle({
         Name = "Boar King Level:40",
         Default = false,
         Callback = function(value)
-            BoarManMob = value
-            if BoarManMob then
+            Mon = value
+            if Mon then
     
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2170,37 +2392,83 @@ local MobName = "BoarMan"
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while BoarManMob do
-                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
                             
-                spawn(function()
-                    while BoarManMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+            local distance = (CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), {CFrame = CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375)})
+            Tw:Play()
+            wait(5)
+            
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
+                            
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+
+                            local distance = (CFrame.new(-4064.499267578125, 398.9500427246094, -858.9842529296875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw2 = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-4064.499267578125, 398.9500427246094, -858.9842529296875)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), {CFrame = CFrame.new(-3855.776611328125, 598.949951171875, -856.896484375)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
-})
------------------------------------------------------------------------------------------------------------------
+})-------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Golem Level:50
 local MobName = "Golem"
-local GolemMob = true
+local BowAttack = false
+local Mon = false
 
     Tab4:AddToggle({
         Name = "Golem Level:50",
         Default = false,
         Callback = function(value)
-            GolemMob = value
-            if GolemMob then
+            Mon = value
+            if Mon then
     
             local tweenService = game:GetService("TweenService")
             local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2210,151 +2478,342 @@ local GolemMob = true
             local char = player.Character
                 
                 
-            while GolemMob do
+            local distance = (CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531)})
+            Tw:Play()
+            wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while GolemMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
 
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
+                            
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-967.48291015625, 295.2413635253906, -95.48004913330078).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-967.48291015625, 295.2413635253906, -95.48004913330078)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-958.8230590820312, 317.7345275878906, -286.8630676269531)})
+                            Tw:Play()
+                            wait(2)
+                        end
+                    end
+                end
+                wait()
+            end
+            Mon = false
+        end
+    end
+})
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Elsa Level:75
 local MobName = "Elsa"
+local BowAttack = false
+local Mon = false
 
     local ElsaMob = true
     Tab4:AddToggle({
         Name = "Elsa Level:75",
         Default = false,
         Callback = function(value)
-            ElsaMob = value
-            if ElsaMob then
+            Mon = value
+            if Mon then
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
             local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while ElsaMob do
+                local distance = (CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125)})
+                Tw:Play()
+                wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while ElsaMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
 
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
+                            
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(921.2429809570312, -225.63125610351562, -464.650634765625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(921.2429809570312, -225.63125610351562, -464.650634765625)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(915.694580078125, -225.63125610351562, -529.559814453125)})
+                            Tw:Play()
+                            wait(2)
+                        end
+                    end
+                end
+                wait()
+            end
+            Mon = false
+        end
+    end
+})
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Rouge Paladin Level:80
 local MobName = "RougePaladin"
+local BowAttack = false
+local Mon = false
 
     local RougePaladinMob = true
     Tab4:AddToggle({
         Name = "Rouge Paladin Level:80",
         Default = false,
         Callback = function(value)
-            RougePaladinMob = value
-            if RougePaladinMob then
+            Mon = value
+            if Mon then
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
             local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while RougePaladinMob do
+                local distance = (CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312)})
+                Tw:Play()
+                wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while RougePaladinMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-4489.6455078125, -339.67413330078125, -941.3670043945312)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
+
 
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Ruined Knight Level:85
 local MobName = "RuinedKnight"
+local BowAttack = false
+local Mon = false
 
 local RuinedKnightMob = true
 Tab4:AddToggle({
     Name = "Ruined Knight Level:85",
     Default = false,
     Callback = function(value)
-        RuinedKnightMob = value
-        if RuinedKnightMob then
+            Mon = value
+            if Mon then
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
             local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while RuinedKnightMob do
+            local distance = (CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312)})
+            Tw:Play()
+            wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while RuinedKnightMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                            repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-4461.2177734375, -339.6742248535156, -581.7333374023438)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3347.35595703125, -339.0802001953125, -911.8562622070312)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Hiyay Level:90
 local MobName = "Hiei"
+local BowAttack = false
+local Mon = false
 
     local HieiMob = true
     Tab4:AddToggle({
         Name = "Hiyay Level:90",
         Default = false,
         Callback = function(value)
-            HieiMob = value
-            if HieiMob then
+            Mon = value
+            if Mon then
     
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2362,38 +2821,85 @@ local MobName = "Hiei"
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while HieiMob do
+                local distance = (CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125)})
+                Tw:Play()
+                wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while HieiMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
 
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
+                            
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                             repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-2899.255859375, 332.9498291015625, -865.3580932617188).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-2899.255859375, 332.9498291015625, -865.3580932617188)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3119.896484375, 463.95001220703125, -1144.848876953125)})
+                            Tw:Play()
+                            wait(2)
+                        end
+                    end
+                end
+                wait()
+            end
+            Mon = false
+        end
+    end
+})
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Kaze Level:100
 local MobName = "Kaze"
+local BowAttack = false
+local Mon = false
 
-    local KazeMob = true
+    local Mon = true
     Tab4:AddToggle({
         Name = "Kaze Level:100",
         Default = false,
         Callback = function(value)
-            KazeMob = value
-            if KazeMob then
+            Mon = value
+            if Mon then
     
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2401,37 +2907,85 @@ local MobName = "Kaze"
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while KazeMob do
+                local distance = (CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875)})
+                Tw:Play()
+                wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while KazeMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                             repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3046.301513671875, -336.8670654296875, -1549.7684326171875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3046.301513671875, -336.8670654296875, -1549.7684326171875)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3393.783447265625, -339.6742248535156, -1576.4881591796875)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
 ------------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Nodryre Level:100
 local MobName = "Nodryre"
+local BowAttack = false
+local Mon = false
 
     local NodryreMob = true
     Tab4:AddToggle({
         Name = "Nodryre Level:100",
         Default = false,
         Callback = function(value)
-            NodryreMob = value
-            if NodryreMob then
+            Mon = value
+            if Mon then
     
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2439,38 +2993,86 @@ local MobName = "Nodryre"
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while NodryreMob do
+                local distance = (CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                local speed = 300
+                local time = distance / speed
+                local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906)})
+                Tw:Play()
+                wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while NodryreMob do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                             repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(152.73670959472656, 5.273518085479736, -509.7655944824219).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(152.73670959472656, 5.273518085479736, -509.7655944824219)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(231.00592041015625, 120.15098571777344, -203.12843322753906)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
 
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Flame Dragon Level:105
 local MobName = "Dragon"
+local BowAttack = false
+local Mon = false
 
 local DragonMon = true
 Tab4:AddToggle({
     Name = "Dragon Level:105",
     Default = false,
     Callback = function(value)
-        DragonMon = value
-        if DragonMon then
+            Mon = value
+            if Mon then
     
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2478,38 +3080,78 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while DragonMon do
+            local distance = (CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688)})
+            Tw:Play()
+            wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while DragonMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                             repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-3228.85302734375, 491.5760192871094, -581.2042846679688)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
 
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords MichKal Level:150
 local MobName = "Michkal"
+local BowAttack = false
+local Mon = false
 
 local MichkalMon = true
 Tab4:AddToggle({
     Name = "MichKal Level:150",
     Default = false,
     Callback = function(value)
-        MichkalMon = value
-        if MichkalMon then
+            Mon = value
+            if Mon then
     
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2517,38 +3159,87 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while MichkalMon do
+            local distance = (CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375)})
+            Tw:Play()
+            wait(5)
+
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while MichkalMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                             repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-1065.4139404296875, 42.86543655395508, -1835.20703125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-1065.4139404296875, 42.86543655395508, -1835.20703125)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-902.2942504882812, 155.3244171142578, -1599.96484375)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
 
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Melioofus Level:200
 local MobName = "Melioofus"
+local BowAttack = false
+local Mon = false
 
 local MelioofusMon = true
 Tab4:AddToggle({
     Name = "Melioofus Level:200",
     Default = false,
     Callback = function(value)
-        MelioofusMon = value
-        if MelioofusMon then
+            Mon = value
+            if Mon then
     
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2556,38 +3247,86 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while MelioofusMon do
+            local distance = (CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625)})
+            Tw:Play()
+            wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while MelioofusMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                              repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-1004.2633056640625, 339.01983642578125, 175.7955322265625)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
 
 ------------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Legendary Level:200
 local MobName = "Legendary"
+local BowAttack = false
+local Mon = false
 
 local LegendaryMon = true
 Tab4:AddToggle({
     Name = "Legendary Level:200",
     Default = false,
     Callback = function(value)
-        LegendaryMon = value
-        if LegendaryMon then
+            Mon = value
+            if Mon then
     
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2595,76 +3334,77 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while LegendaryMon do
+            local distance = (CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375)})
+            Tw:Play()
+            wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                            
-                spawn(function()
-                    while LegendaryMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
-                    end
-                end)
-            end
-        end
-        wait()
-    end
-    end
-end
-})
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
 
------------------------------------------------------------------------------------------------------------------
----DualSwords Legendary Super Level:200
-local MobName = "LegendarySuper"
-
-local LegendarySuperMon = true
-Tab4:AddToggle({
-    Name = "Legendary Super Level:200",
-    Default = false,
-    Callback = function(value)
-        LegendarySuperMon = value
-        if LegendarySuperMon then
-    
-    
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
-            local player = game:GetService("Players").LocalPlayer
-            local char = player.Character
-                
-            while LegendarySuperMon do
-                for i,v in pairs(game.workspace:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while LegendarySuperMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                             repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-908.38720703125, 154.69476318359375, -1596.7698974609375)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
 
 -----------------------------------------------------------------------------------------------------------------
 
 ---DualSwords Kurito Level:333
 local MobName = "Kurito"
+local BowAttack = false
+local Mon = false
 
-local KuritoMon = true
 Tab4:AddToggle({
     Name = "Kurito Level:333",
     Default = false,
     Callback = function(value)
-        KuritoMon = value
-        if KuritoMon then
+            Mon = value
+            if Mon then
     
     
             local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
@@ -2672,24 +3412,70 @@ Tab4:AddToggle({
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
                 
-            while KuritoMon do
+            local distance = (CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281)})
+            Tw:Play()
+            wait(5)
+            
+            while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                            spawn(function()
+                                BowAttack = true
+                                while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do wait()
+                                    char.DualSwords.SwordScript.Activate:FireServer()
+                                end
+                                wait(30)
+                                BowAttack = false
+                                wait(5)
+                                BowAttack = true
+                            end)
                             
-                spawn(function()
-                    while KuritoMon do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                    wait(0.1)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
+             
+                              repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-2600.0263671875, -339.6741638183594, -434.7408447265625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-2600.0263671875, -339.6741638183594, -434.7408447265625)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-2838.8486328125, -339.6742248535156, -388.2934875488281)})
+                            Tw:Play()
+                            wait(2)
+                        end
                     end
-                end)
+                end
+                wait()
             end
+            Mon = false
         end
-        wait()
     end
-    end
-end
 })
 
 -----------------------------------------------------------------------------------------------------------------
@@ -2704,37 +3490,82 @@ Tab4:AddToggle({
     Default = false,
     Callback = function(value)
         Mon = value
-    
         if Mon then
 
-            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(1, Enum.EasingStyle.Linear)
             local player = game:GetService("Players").LocalPlayer
             local char = player.Character
-    
+            
+
+            local distance = (CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            local speed = 300
+            local time = distance / speed
+            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                {CFrame = CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125)})
+            Tw:Play()
+            wait(5)
+            
             while Mon do
                 for i,v in pairs(game.workspace.Mobs:GetChildren()) do
-                if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
-                    tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
-                    wait(1)
-                end
-                end
-                end
+                    if string.match(v.Name, MobName) and v:FindFirstChild("HumanoidRootPart") then
+                        if v.HumanoidRootPart and v.HumanoidRootPart:IsA("BasePart") and v.HumanoidRootPart.Position.Z - char.HumanoidRootPart.Position.Z <= 5000 then
+
+                        spawn(function()
+                            BowAttack = true
+                            while BowAttack and v.Humanoid and v.Humanoid.Health > 0 do 
+                                wait()
+                                char.DualSwords.SwordScript.Activate:FireServer(HumanoidRootPart)
+                            end
+                            wait(30)
+                            BowAttack = false
+                            wait(5)
+                            SwordsAttack = true
+                        end)
+
+                            while Mon and v.Humanoid.Health > 0 do
+                                wait(1)
+                                tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,3)}):Play()
+                            end
                             
-                spawn(function()
-                    while BowAttack do
-                    char.DualSwords.SwordScript.Activate:FireServer()
-                wait(0.1)
+                              repeat wait() until v.Humanoid.Health <= 0
+                            BowAttack = false
+                            wait(1)
+                            local distance = (v.HumanoidRootPart.CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = v.HumanoidRootPart.CFrame})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(256.6656799316406, 893.0773315429688, 2806.488525390625)})
+                            Tw:Play()
+                            wait(4)
+                            
+                            local distance = (CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                            local speed = 300
+                            local time = distance / speed
+                            local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                                {CFrame = CFrame.new(-2980.464599609375, -339.6742248535156, -396.0430908203125)})
+                            Tw:Play()
+                            wait(2)
+                        end
+                    end
+                end
+                wait()
             end
-        end)
-        wait(5)
-        BowAttack = false
-        wait(5)
-        BowAttack = true
+            Mon = false
+        end
     end
-    Mon = false
-end
 })
+
 --
 ---
 ----
@@ -2964,6 +3795,7 @@ Tab7:AddButton({
         end
     end
 })
+
 
 --
 ---
