@@ -1,0 +1,290 @@
+
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Legends Re:Written", HidePremium = false, SaveConfig = false, ConfigFolder = "asdsahgjasdhkgjbdsa"})
+
+-------------------------------------------------  Star Players  -------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+---------------------------------------------------------------------------------------------------------------------
+local Tab1 = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://12836323838",
+	PremiumOnly = false
+})
+-------------------------------------------
+local Tab2 = Window:MakeTab({
+	Name = "Raid Lv.50",
+	Icon = "rbxassetid://12836287616",
+	PremiumOnly = false
+})
+-------------------------------------------
+
+local Tab3 = Window:MakeTab({
+	Name = "Raid Lv.60",
+	Icon = "rbxassetid://12836287616",
+	PremiumOnly = false
+})
+
+-------------------------------------------
+
+local Tab4 = Window:MakeTab({
+	Name = "Oter",
+	Icon = "rbxassetid://12836304245",
+	PremiumOnly = false
+})
+--------------------------------------------
+
+--- local All
+repeat wait() until game:IsLoaded()
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local Workspace = game:GetService("Workspace")
+local HttpService = game:GetService("HttpService")
+local Player = game.Players.LocalPlayer
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+InfJump = false
+Tab1:AddToggle({
+    Name = "InfJump",
+    Default = false,
+    Callback = function(value)
+        InfJump = value
+    end
+})
+
+local function onJumpRequest()
+    if InfJump then
+        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+    end
+end
+
+game:GetService("UserInputService").JumpRequest:connect(onJumpRequest)
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+local Speed = 0
+Tab1:AddTextbox({
+    Name = "Speed",
+    Default = "      ",
+    TextDisappear = true,
+    Callback = function(value)
+        local amount = tonumber(value)
+        if amount and amount > 0 then
+            Speed = amount
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
+        end
+    end
+})
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Invisicam = true
+Tab1:AddToggle({
+    Name = "Invisicam",
+    Default = false,
+    Callback = function(value)
+        Invisicam = value
+        if Invisicam then
+            Player.DevCameraOcclusionMode = "Invisicam"
+        else
+            Player.DevCameraOcclusionMode = "Zoom"
+        end
+    end
+})
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+local CollectMedkits = true
+
+Tab1:AddToggle({
+    Name = "Collect Medkits",
+    Default = false,
+    Callback = function(value)
+    CollectMedkits = value
+    if CollectMedkits then
+        while wait() and CollectMedkits do
+            pcall(function()
+                if CollectMedkits and Player.Character then
+                    local humanoid = Player.Character:FindFirstChild("Humanoid")
+                    if humanoid and humanoid.Health < humanoid.MaxHealth * 0.9 then
+                        for i,v in pairs(Workspace.Ignore:GetChildren()) do
+                            if v.Name == "Medkit" and v:FindFirstChildWhichIsA("TouchTransmitter",true) then
+                                if humanoid.Health < humanoid.MaxHealth then
+                                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true), v, 0)
+                                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true), v, 1)
+                                end
+                            end
+                        end
+                    end
+                end
+            end)
+        end
+    end
+end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local CollectChest = false
+
+Tab1:AddToggle({
+    Name = "Collect Chest",
+    Default = false,
+    Callback = function(value)
+        CollectChest = value
+        if CollectChest then
+            spawn(function()
+                while true do 
+                    wait()
+                    if not CollectChest then
+                        break
+                    end
+                    pcall(function()
+                        for i,v in pairs(Workspace:GetDescendants()) do
+                            if v.Name == "Chest"  then
+                                firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("Hitbox"),0)
+                                firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("Hitbox"),1)
+                            end 
+                        end 
+                    end)
+                end 
+            end)
+        end
+    end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Auto Farm
+local h = require(ReplicatedStorage.Shared.Modules.DungeonLibrary)
+
+local Dungeons = {}
+for i, v in pairs(h.Dungeons) do
+    table.insert(Dungeons, i)
+end
+GameModes = {}
+for i, v in pairs(h.GameModes) do
+    table.insert(GameModes, i)
+end
+Difficulties = {}
+for i, v in pairs(h.Difficulties) do
+    table.insert(Difficulties, i)
+end
+
+
+local function GetClosestt()
+    local TargetDistance = math.huge
+    local Target
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v.ClassName == "Folder" then
+            for i, x in pairs(v:GetChildren()) do
+                if x.ClassName == "Folder" then
+                    for i, c in pairs(x:GetChildren()) do
+                        if
+                            c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
+                                c:FindFirstChildOfClass("Humanoid").Health ~= 0 and
+                                c ~= nil
+                         then
+                            local mag =
+                                (Player.Character.HumanoidRootPart.Position -
+                                c.HumanoidRootPart.Position).magnitude
+                            if mag < TargetDistance then
+                                TargetDistance = mag
+                                Target = c
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    return Target
+end
+
+
+
+local Tween = function(A, B, C)
+    if A and B and C then
+        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 100, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 100, 0))}):Play()
+        wait()
+        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 100, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 100, 0))}):Play()
+    end 
+end
+
+
+local Script = require(Player.PlayerScripts.Shared.Client.CombatController)
+local ScriptFunction = Script.BasicAttack
+local ScriptFunction2 = Script.UseAbility
+
+
+if game.PlaceId == 2960777560 then
+pcall(function()
+ReplicatedStorage.Lobby.Remotes.ClaimDailyReward:FireServer()
+ReplicatedStorage.Lobby.Remotes.ClaimTreasureReward:FireServer()
+end)
+end
+
+local AutoMobs = true
+
+Tab1:AddToggle({
+    Name = "Auto Farm",
+    Default = false,
+    Callback = function(value)
+        AutoMobs = value
+        if AutoMobs then
+            
+        game:GetService("RunService").Stepped:connect(function()
+                pcall(function()
+                if AutoMobs then
+                            ScriptFunction(Script)
+                            ScriptFunction2(Script, GetClosestt().PrimaryPart.Position)
+                        end
+                 end)
+            end)
+
+        
+        spawn(function()
+            while wait() and AutoMobs do 
+                pcall(function()
+                    ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
+                    ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
+                    ReplicatedStorage.Dungeon.Remotes.StartWaveDefense:FireServer()
+        
+                    ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
+                    for i,v in pairs(Workspace:GetChildren()) do
+                        if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
+                            firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
+                            firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
+                        end 
+                    end 
+                    speed = 60
+                    if GetClosestt():FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
+                        Tween(Player.Character.HumanoidRootPart, GetClosestt().HumanoidRootPart, speed)
+                        wait()
+                    end
+                    
+                    speed = 60
+                    if GetClosestt():FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
+                        Tween(Player.Character.HumanoidRootPart, destinationOut, speed)
+                        wait()
+                    end
+               end)
+            end
+        end)
+    end
+end
+})
+
+
+
+OrionLib:Init()
