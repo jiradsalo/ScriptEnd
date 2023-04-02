@@ -20,25 +20,12 @@ local Tab1 = Window:MakeTab({
 })
 -------------------------------------------
 local Tab2 = Window:MakeTab({
-	Name = "Raid Lv.50",
+	Name = "Auto Farm",
 	Icon = "rbxassetid://12836287616",
 	PremiumOnly = false
 })
 -------------------------------------------
 
-local Tab3 = Window:MakeTab({
-	Name = "Raid Lv.60",
-	Icon = "rbxassetid://12836287616",
-	PremiumOnly = false
-})
-
--------------------------------------------
-
-local Tab4 = Window:MakeTab({
-	Name = "Oter",
-	Icon = "rbxassetid://12836304245",
-	PremiumOnly = false
-})
 --------------------------------------------
 
 --- local All
@@ -72,15 +59,12 @@ game:GetService("UserInputService").JumpRequest:connect(onJumpRequest)
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-local Speed = 0
-Tab1:AddTextbox({
+local Speed = 80
+
+Tab1:AddButton({
     Name = "Speed",
-    Default = "      ",
-    TextDisappear = true,
     Callback = function(value)
-        local amount = tonumber(value)
-        if amount and amount > 0 then
-            Speed = amount
+        if Speed then
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
         end
     end
@@ -104,9 +88,49 @@ Tab1:AddToggle({
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-local CollectMedkits = true
+AntiAFK = false
 
 Tab1:AddToggle({
+    Name = "Anti AFK",
+    Default = false,
+        Callback = function(value)
+        AntiAFK = value
+        if AntiAFK then
+            wait(3)
+            local VirtualUser=game:service'VirtualUser'
+            game:service('Players').LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+            end)
+            end
+        end
+})
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+local OffShake = true
+Tab1:AddToggle({
+    Name = "Off Shake Camera",
+    Default = false,
+    Callback = function(value)
+        if OffShake then
+            game:GetService("UserInputService").WindowFocused:connect(function()
+                game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Fixed}):Play()
+            end)
+        else
+            game:GetService("UserInputService").WindowFocused:connect(function()
+                game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Custom}):Play()
+            end)
+        end
+    end
+})
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+local CollectMedkits = true
+
+Tab2:AddToggle({
     Name = "Collect Medkits",
     Default = false,
     Callback = function(value)
@@ -137,7 +161,7 @@ end
 
 local CollectChest = false
 
-Tab1:AddToggle({
+Tab2:AddToggle({
     Name = "Collect Chest",
     Default = false,
     Callback = function(value)
@@ -166,21 +190,6 @@ Tab1:AddToggle({
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---Auto Farm
-local h = require(ReplicatedStorage.Shared.Modules.DungeonLibrary)
-
-local Dungeons = {}
-for i, v in pairs(h.Dungeons) do
-    table.insert(Dungeons, i)
-end
-GameModes = {}
-for i, v in pairs(h.GameModes) do
-    table.insert(GameModes, i)
-end
-Difficulties = {}
-for i, v in pairs(h.Difficulties) do
-    table.insert(Difficulties, i)
-end
-
 
 local function GetClosestt()
     local TargetDistance = math.huge
@@ -212,47 +221,59 @@ local function GetClosestt()
 end
 
 
-
-local Tween = function(A, B, C)
+local TweenMon = function(A,B,C)
     if A and B and C then
-        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 100, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 100, 0))}):Play()
-        wait()
-        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 100, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 100, 0))}):Play()
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
+    end 
+end 
+
+local TweenPlay1 = function(A,B,C)
+    if A and B and C then
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 50, 0))})
+        tween1:Play()
+        tween1.Completed:Wait(1)
+        local tween2 = TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 50, 100) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 50, 100))})
+        tween2:Play()
     end 
 end
+
+
 
 
 local Script = require(Player.PlayerScripts.Shared.Client.CombatController)
 local ScriptFunction = Script.BasicAttack
 local ScriptFunction2 = Script.UseAbility
 
-
-if game.PlaceId == 2960777560 then
-pcall(function()
-ReplicatedStorage.Lobby.Remotes.ClaimDailyReward:FireServer()
-ReplicatedStorage.Lobby.Remotes.ClaimTreasureReward:FireServer()
-end)
-end
-
 local AutoMobs = true
+local Swim = true
 
-Tab1:AddToggle({
-    Name = "Auto Farm",
+Tab2:AddToggle({
+    Name = "Auto TP Farm",
     Default = false,
     Callback = function(value)
         AutoMobs = value
-        if AutoMobs then
-            
+        Swim = value
+
         game:GetService("RunService").Stepped:connect(function()
                 pcall(function()
                 if AutoMobs then
                             ScriptFunction(Script)
                             ScriptFunction2(Script, GetClosestt().PrimaryPart.Position)
                         end
-                 end)
-            end)
+                    end)
+                end)
 
-        
+                if Swim then
+                    local region = Region3.new(Vector3.new(-999,0,-999), Vector3.new(999,999,999))
+                    region = region:ExpandToGrid(4)
+                    game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Water)
+                    else
+                    local region = Region3.new(Vector3.new(-999,0,-999), Vector3.new(999,999,999))
+                    region = region:ExpandToGrid(4)
+                    game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Air)
+                    end
+
+  
         spawn(function()
             while wait() and AutoMobs do 
                 pcall(function()
@@ -266,24 +287,266 @@ Tab1:AddToggle({
                             firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
                             firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
                         end 
-                    end 
-                    speed = 60
-                    if GetClosestt():FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
-                        Tween(Player.Character.HumanoidRootPart, GetClosestt().HumanoidRootPart, speed)
-                        wait()
                     end
                     
-                    speed = 60
-                    if GetClosestt():FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
-                        Tween(Player.Character.HumanoidRootPart, destinationOut, speed)
-                        wait()
+                local function moveToClosest(closestPlayer)
+                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
+                        local SpeedPla = 50
+                        TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+                    end
+                end
+                
+                while true do
+                    local closestPlayer = GetClosestt()
+                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
+                        local InfernoWave = game:GetService("Workspace").Ignore.InfernoWave
+                        local SpeedMon = 500
+                        TweenMon(InfernoWave, closestPlayer.HumanoidRootPart, SpeedMon)
+                    end
+                    wait(0.5)
+                    moveToClosest(closestPlayer)
+                end
+
+      
+               end)
+        end
+    end)
+end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local function GetClosestt()
+    local TargetDistance = math.huge
+    local Target
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v.ClassName == "Folder" then
+            for i, x in pairs(v:GetChildren()) do
+                if x.ClassName == "Folder" then
+                    for i, c in pairs(x:GetChildren()) do
+                        if
+                            c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
+                                c:FindFirstChildOfClass("Humanoid").Health ~= 0 and
+                                c ~= nil
+                         then
+                            local mag =
+                                (Player.Character.HumanoidRootPart.Position -
+                                c.HumanoidRootPart.Position).magnitude
+                            if mag < TargetDistance then
+                                TargetDistance = mag
+                                Target = c
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    return Target
+end
+
+
+local TweenMon = function(A,B,C)
+    if A and B and C then
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
+    end 
+end 
+
+local TweenPlay1 = function(A,B,C)
+    if A and B and C then
+        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 5, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 5, 0))}):Play()
+        wait(1)
+        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 5, 100) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 5, 100))}):Play()
+    
+    end 
+end
+
+
+
+local Script = require(Player.PlayerScripts.Shared.Client.CombatController)
+local ScriptFunction = Script.BasicAttack
+local ScriptFunction2 = Script.UseAbility
+
+local AutoMobs = true
+
+Tab2:AddToggle({
+    Name = "Auto No TP Farm",
+    Default = false,
+    Callback = function(value)
+        AutoMobs = value
+
+
+        game:GetService("RunService").Stepped:connect(function()
+                pcall(function()
+                if AutoMobs then
+                            ScriptFunction(Script)
+                            ScriptFunction2(Script, GetClosestt().PrimaryPart.Position)
+                        end
+                    end)
+                end)
+
+        spawn(function()
+            while wait() and AutoMobs do 
+                pcall(function()
+                    ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
+                    ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
+                    ReplicatedStorage.Dungeon.Remotes.StartWaveDefense:FireServer()
+        
+                    ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
+                    for i,v in pairs(Workspace:GetChildren()) do
+                        if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
+                            firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
+                            firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
+                        end 
+                    end
+                    
+                    
+                                    while true do
+                                    local closestPlayer = GetClosestt()
+                                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
+                                        local InfernoWave = game:GetService("Workspace").Ignore.InfernoWave
+                                        local SpeedMon = 500
+                                        TweenMon(InfernoWave, closestPlayer.HumanoidRootPart, SpeedMon)
+                                    end
+                                    wait(0.5)
+                                end
+
+               end)
+        end
+    end)
+end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+local function GetClosestt()
+    local TargetDistance = math.huge
+    local Target
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v.ClassName == "Folder" then
+            for i, x in pairs(v:GetChildren()) do
+                if x.ClassName == "Folder" then
+                    for i, c in pairs(x:GetChildren()) do
+                        if
+                            c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
+                                c:FindFirstChildOfClass("Humanoid").Health ~= 0 and
+                                c ~= nil
+                         then
+                            local mag =
+                                (Player.Character.HumanoidRootPart.Position -
+                                c.HumanoidRootPart.Position).magnitude
+                            if mag < TargetDistance then
+                                TargetDistance = mag
+                                Target = c
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    return Target
+end
+
+
+local TweenMon = function(A,B,C)
+    if A and B and C then
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
+    end 
+end 
+
+local TweenPlay1 = function(A,B,C)
+    if A and B and C then
+        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 5, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 5, 0))}):Play()
+        wait(1)
+        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 5, 100) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 5, 100))}):Play()
+    
+    end 
+end
+
+
+
+local Script = require(Player.PlayerScripts.Shared.Client.CombatController)
+local ScriptFunction = Script.BasicAttack
+local ScriptFunction2 = Script.UseAbility
+
+local AutoMobs = true
+local TPL = false
+
+Tab2:AddToggle({
+    Name = "Auto Farm WAVE",
+    Default = false,
+    Callback = function(value)
+        AutoMobs = value
+        TPL = value
+
+            local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose, tweenInfoClose = game:GetService("TweenService"), TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+                
+        spawn(function()
+            while TPL do
+                if TPL then
+                    local distance = (CFrame.new(-1664.658447265625, 1121.3773193359375, -2137.87451171875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    local speed = 50
+                    local time = distance / speed
+                    local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                        {CFrame = CFrame.new(-1664.658447265625, 1121.3773193359375, -2137.87451171875)})
+                    Tw:Play()
+                    wait(2)
+                    
+                    local distance = (CFrame.new(-1713.761962890625, 1121.3773193359375, -2021.268798828125).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    local speed = 50
+                    local time = distance / speed
+                    local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                        {CFrame = CFrame.new(-1713.761962890625, 1121.3773193359375, -2021.268798828125)})
+                    Tw:Play()
+                    wait(2)
+                end
+                wait()
+            end
+            end)
+
+        game:GetService("RunService").Stepped:connect(function()
+                pcall(function()
+                if AutoMobs then
+                            ScriptFunction(Script)
+                            ScriptFunction2(Script, GetClosestt().PrimaryPart.Position)
+                        end
+                    end)
+                end)
+
+        spawn(function()
+            while wait() and AutoMobs do 
+                pcall(function()
+                    ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
+                    ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
+                    ReplicatedStorage.Dungeon.Remotes.StartWaveDefense:FireServer()
+        
+                    ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
+                    for i,v in pairs(Workspace:GetChildren()) do
+                        if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
+                            firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
+                            firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
+                        end 
+                    end
+
+                    while true do
+                    local closestPlayer = GetClosestt()
+                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
+                    local InfernoWave = game:GetService("Workspace").Ignore.InfernoWave
+                    local SpeedMon = 500
+                    TweenMon(InfernoWave, closestPlayer.HumanoidRootPart, SpeedMon)
+                    end
+                    wait(0.5)
                     end
                end)
             end
         end)
     end
-end
 })
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
