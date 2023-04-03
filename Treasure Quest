@@ -294,7 +294,23 @@ local function moveToClosest(closestPlayer)
                     end
                     
                 
-                
+                                                    while true do
+
+                                    local closestPlayer = GetClosestt()
+
+                                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
+
+                                        local Tornado = game:GetService("Workspace").Ignore.Tornado
+
+                                        local SpeedMon = 500
+
+                                        TweenMon(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
+
+                                    end
+
+                                    wait(0.5)
+
+                                end
                 
       
                end)
