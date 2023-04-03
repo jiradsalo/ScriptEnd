@@ -299,9 +299,9 @@ Tab2:AddToggle({
                 while true do
                     local closestPlayer = GetClosestt()
                     if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
-                        local WaveBlast = game:GetService("Workspace").Ignore.WaveBlast
+                        local Tornado = game:GetService("Workspace").Ignore.Tornado
                         local SpeedMon = 500
-                        TweenMon(WaveBlast, closestPlayer.HumanoidRootPart, SpeedMon)
+                        TweenMon(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
                     end
                     wait(0.5)
                     moveToClosest(closestPlayer)
@@ -404,9 +404,9 @@ Tab2:AddToggle({
                                     while true do
                                     local closestPlayer = GetClosestt()
                                     if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
-                                        local WaveBlast = game:GetService("Workspace").Ignore.WaveBlast
+                                        local Tornado = game:GetService("Workspace").Ignore.Tornado
                                         local SpeedMon = 500
-                                        TweenMon(WaveBlast, closestPlayer.HumanoidRootPart, SpeedMon)
+                                        TweenMon(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
                                     end
                                     wait(0.5)
                                 end
