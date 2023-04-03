@@ -299,9 +299,9 @@ Tab2:AddToggle({
                 while true do
                     local closestPlayer = GetClosestt()
                     if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
-                        local Pumpkin = game:GetService("Workspace").Ignore.Pumpkin.Pumpkin
+                        local WaveBlast = game:GetService("Workspace").Ignore.WaveBlast
                         local SpeedMon = 500
-                        TweenMon(Pumpkin, closestPlayer.HumanoidRootPart, SpeedMon)
+                        TweenMon(WaveBlast, closestPlayer.HumanoidRootPart, SpeedMon)
                     end
                     wait(0.5)
                     moveToClosest(closestPlayer)
@@ -404,9 +404,9 @@ Tab2:AddToggle({
                                     while true do
                                     local closestPlayer = GetClosestt()
                                     if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
-                                        local Pumpkin = game:GetService("Workspace").Ignore.Pumpkin.Pumpkin
+                                        local WaveBlast = game:GetService("Workspace").Ignore.WaveBlast
                                         local SpeedMon = 500
-                                        TweenMon(Pumpkin, closestPlayer.HumanoidRootPart, SpeedMon)
+                                        TweenMon(WaveBlast, closestPlayer.HumanoidRootPart, SpeedMon)
                                     end
                                     wait(0.5)
                                 end
