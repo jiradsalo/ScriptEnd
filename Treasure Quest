@@ -284,7 +284,7 @@ Tab2:AddToggle({
                     
 		    
 
-local function moveToClosest(closestPlayer)
+            local function moveToClosest(closestPlayer)
 
                     if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
 
@@ -295,33 +295,39 @@ local function moveToClosest(closestPlayer)
                     end
 
                 end
-		    
-		    
-		    
+
                 
-                                                    while true do
 
-                                    local closestPlayer = GetClosestt()
+                while true do
 
-                                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
+                    local closestPlayer = GetClosestt()
 
-                                        local Tornado = game:GetService("Workspace").Ignore.Tornado
+                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
 
-                                        local SpeedMon = 500
+                        local Tornado = game:GetService("Workspace").Ignore.Tornado
 
-                                        TweenMon(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
+                        local SpeedMon = 500
 
-                                    end
+                        TweenMon(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
 
-                                    wait(0.5)
+                    end
 
-                                end
-                
+                    wait(0.5)
+
+                    moveToClosest(closestPlayer)
+
+                end
+
       
+
                end)
+
         end
+
     end)
+
 end
+
 })
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
