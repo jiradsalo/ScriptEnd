@@ -245,7 +245,6 @@ local ScriptFunction = Script.BasicAttack
 local ScriptFunction2 = Script.UseAbility
 
 local AutoMobs = true
-local Swim = true
 
 Tab2:AddToggle({
     Name = "Auto TP Farm",
@@ -346,12 +345,14 @@ end
 
 local TweenPlay1 = function(A,B,C)
     if A and B and C then
-        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 5, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 5, 0))}):Play()
-        wait(1)
-        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 5, 100) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 5, 100))}):Play()
-    
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))})
+        tween1:Play()
+        tween1.Completed:Wait(1)
+        local tween2 = TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 0, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))})
+        tween2:Play()
     end 
 end
+
 
 
 
@@ -392,6 +393,19 @@ Tab2:AddToggle({
                         end 
                     end
                     
+		    local function moveToClosest(closestPlayer)
+
+                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
+
+                        local SpeedPla = 50
+
+                        TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+
+                    end
+
+                end
+		    
+		    
                     
                                     while true do
                                     local closestPlayer = GetClosestt()
