@@ -263,15 +263,7 @@ Tab2:AddToggle({
                     end)
                 end)
 
-                if Swim then
-                    local region = Region3.new(Vector3.new(-999,0,-999), Vector3.new(999,999,999))
-                    region = region:ExpandToGrid(4)
-                    game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Water)
-                    else
-                    local region = Region3.new(Vector3.new(-999,0,-999), Vector3.new(999,999,999))
-                    region = region:ExpandToGrid(4)
-                    game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Air)
-                    end
+                
 
   
         spawn(function()
