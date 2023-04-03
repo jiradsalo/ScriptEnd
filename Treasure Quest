@@ -255,17 +255,6 @@ Tab2:AddToggle({
 
 
 
-local function moveToClosest(closestPlayer)
-
-                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
-
-                        local SpeedPla = 50
-
-                        TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
-
-                    end
-
-                end
         game:GetService("RunService").Stepped:connect(function()
                 pcall(function()
                 if AutoMobs then
@@ -293,6 +282,22 @@ local function moveToClosest(closestPlayer)
                         end 
                     end
                     
+		    
+
+local function moveToClosest(closestPlayer)
+
+                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
+
+                        local SpeedPla = 50
+
+                        TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+
+                    end
+
+                end
+		    
+		    
+		    
                 
                                                     while true do
 
