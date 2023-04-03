@@ -223,16 +223,16 @@ end
 
 local TweenMon = function(A,B,C)
     if A and B and C then
-        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, -2))}):Play()
     end 
 end 
 
 local TweenPlay1 = function(A,B,C)
     if A and B and C then
-        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))})
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, -2))})
         tween1:Play()
         tween1.Completed:Wait(1)
-        local tween2 = TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 0, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))})
+        local tween2 = TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 0, 2) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 2))})
         tween2:Play()
     end 
 end
@@ -253,6 +253,19 @@ Tab2:AddToggle({
         AutoMobs = value
         Swim = value
 
+
+
+local function moveToClosest(closestPlayer)
+
+                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
+
+                        local SpeedPla = 50
+
+                        TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+
+                    end
+
+                end
         game:GetService("RunService").Stepped:connect(function()
                 pcall(function()
                 if AutoMobs then
@@ -280,24 +293,9 @@ Tab2:AddToggle({
                         end 
                     end
                     
-                local function moveToClosest(closestPlayer)
-                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
-                        local SpeedPla = 50
-                        TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
-                    end
-                end
                 
-                while true do
-                    local closestPlayer = GetClosestt()
-                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
-                        local Tornado = game:GetService("Workspace").Ignore.Tornado
-                        local SpeedMon = 500
-                        TweenMon(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
-                    end
-                    wait(0.5)
-                    moveToClosest(closestPlayer)
-                end
-
+                
+                
       
                end)
         end
