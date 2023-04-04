@@ -1,6 +1,3 @@
-
-
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "Legends Re:Written", HidePremium = false, SaveConfig = false, ConfigFolder = "asdsahgjasdhkgjbdsa"})
@@ -199,14 +196,10 @@ local function GetClosestt()
             for i, x in pairs(v:GetChildren()) do
                 if x.ClassName == "Folder" then
                     for i, c in pairs(x:GetChildren()) do
-                        if
-                            c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
+                        if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
                                 c:FindFirstChildOfClass("Humanoid").Health ~= 0 and
                                 c ~= nil
-                         then
-                            local mag =
-                                (Player.Character.HumanoidRootPart.Position -
-                                c.HumanoidRootPart.Position).magnitude
+                         then local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
                             if mag < TargetDistance then
                                 TargetDistance = mag
                                 Target = c
@@ -220,31 +213,41 @@ local function GetClosestt()
     return Target
 end
 
-
 local TweenMon = function(A,B,C)
     if A and B and C then
-        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, -2))}):Play()
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
     end 
 end 
 
-local TweenPlay1999 = function(A,B,C)
+local TweenPlay1 = function(A,B,C)
     if A and B and C then
-        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, -2))})
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 50, 0))})
         tween1:Play()
         tween1.Completed:Wait(1)
-        local tween2 = TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 0, 2) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 2))})
-        tween2:Play()
     end 
 end
 
-
-
-
+local TweenPlay2 = function(A,B,C)
+    if A and B and C then
+        local tween2 = TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 50, 100) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 50, 100))})
+        tween2:Play()
+        tween2.Completed:Wait(1)
+    end 
+end
+                
 local Script = require(Player.PlayerScripts.Shared.Client.CombatController)
 local ScriptFunction = Script.BasicAttack
 local ScriptFunction2 = Script.UseAbility
 
+if game.PlaceId == 2960777560 then
+pcall(function()
+ReplicatedStorage.Lobby.Remotes.ClaimDailyReward:FireServer()
+ReplicatedStorage.Lobby.Remotes.ClaimTreasureReward:FireServer()
+end)
+end
+
 local AutoMobs = true
+local Swim = true
 
 Tab2:AddToggle({
     Name = "Auto TP Farm",
@@ -252,8 +255,6 @@ Tab2:AddToggle({
     Callback = function(value)
         AutoMobs = value
         Swim = value
-
-
 
         game:GetService("RunService").Stepped:connect(function()
                 pcall(function()
@@ -264,7 +265,15 @@ Tab2:AddToggle({
                     end)
                 end)
 
-                
+                if Swim then
+                    local region = Region3.new(Vector3.new(-999,0,-999), Vector3.new(999,999,999))
+                    region = region:ExpandToGrid(4)
+                    game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Water)
+                    else
+                    local region = Region3.new(Vector3.new(-999,0,-999), Vector3.new(999,999,999))
+                    region = region:ExpandToGrid(4)
+                    game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Air)
+                    end
 
   
         spawn(function()
@@ -282,44 +291,52 @@ Tab2:AddToggle({
                         end 
                     end
                     
-		    
-while true do
-            local function moveToClosest(closestPlayer)
-
-                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
-
-                        local SpeedPla = 50
-
-                        TweenMon(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
-
+                    local Distance = 1000000
+                   local Monsa = true
+                    while Monsa do
+                        
+                    
+                    
+                    local function moveToClosest(closestPlayer)
+                        if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid",true).Health ~= 0 then
+                            local SpeedPla = 50
+                            TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+                        end
                     end
+                    local closestPlayer = GetClosestt()
+                    moveToClosest(closestPlayer)
 
-                end
-wait(0.5)
-end
+                    local function moveToClosest(closestPlayer)
+                        if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid",true).Health ~= 0 then
+                            local SpeedPla = 50
+                            TweenPlay2(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+                        end
+                    end
+                    local closestPlayer = GetClosestt()
+                    moveToClosest(closestPlayer)
 
-               
-
-                
-
-
-
-
-
-
-                
-
-                
-      
-
-               end)
-
+                    
+                        
+                    local closestPlayer = GetClosestt()
+                    local ignoreFolder = game:GetService("Workspace"):FindFirstChild("Ignore")
+                    if ignoreFolder then
+                        local SpeedMon = 500
+                        for _, obj in ipairs(ignoreFolder:GetDescendants()) do
+                            if obj.Name ~= "Medkits" and (obj:IsA("BasePart") or obj:IsA("Model")) then
+                                local targetPart = obj.Position
+                                if (targetPart - closestPlayer.HumanoidRootPart.Position).Magnitude <= Distance then
+                                    TweenMon(obj, closestPlayer.HumanoidRootPart, SpeedMon)
+                                end
+                            end
+                        end
+                    end
+                    wait(0.1)
+                    end
+                    Monsa = false
+            end)
         end
-
     end)
-
 end
-
 })
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -332,14 +349,10 @@ local function GetClosestt()
             for i, x in pairs(v:GetChildren()) do
                 if x.ClassName == "Folder" then
                     for i, c in pairs(x:GetChildren()) do
-                        if
-                            c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
+                        if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
                                 c:FindFirstChildOfClass("Humanoid").Health ~= 0 and
                                 c ~= nil
-                         then
-                            local mag =
-                                (Player.Character.HumanoidRootPart.Position -
-                                c.HumanoidRootPart.Position).magnitude
+                         then local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
                             if mag < TargetDistance then
                                 TargetDistance = mag
                                 Target = c
@@ -359,19 +372,6 @@ local TweenMon = function(A,B,C)
         local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
     end 
 end 
-
-local TweenPlay1 = function(A,B,C)
-    if A and B and C then
-        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))})
-        tween1:Play()
-        tween1.Completed:Wait(1)
-        local tween2 = TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 0, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))})
-        tween2:Play()
-    end 
-end
-
-
-
 
 local Script = require(Player.PlayerScripts.Shared.Client.CombatController)
 local ScriptFunction = Script.BasicAttack
@@ -409,32 +409,27 @@ Tab2:AddToggle({
                             firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
                         end 
                     end
-                    
-		    local function moveToClosest(closestPlayer)
 
-                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
-
-                        local SpeedPla = 50
-
-                        TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
-
-                    end
-
-                end
-		    
-		    
-                    
-                                    while true do
-                                    local closestPlayer = GetClosestt()
-                                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
-                                        local Tornado = game:GetService("Workspace").Ignore.Tornado
-                                        local SpeedMon = 500
-                                        TweenMon(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
-                                    end
-                                    wait(0.5)
+                    local Distance = 1000000
+                    local Monsa = true
+                    while true do
+                    local closestPlayer = GetClosestt()
+                    local ignoreFolder = game:GetService("Workspace"):FindFirstChild("Ignore")
+                    if ignoreFolder then
+                        local SpeedMon = 500
+                        for _, obj in ipairs(ignoreFolder:GetDescendants()) do
+                            if obj.Name ~= "Medkits" and (obj:IsA("BasePart") or obj:IsA("Model")) then
+                                local targetPart = obj.Position
+                                if (targetPart - closestPlayer.HumanoidRootPart.Position).Magnitude <= Distance then
+                                    TweenMon(obj, closestPlayer.HumanoidRootPart, SpeedMon)
                                 end
-
-               end)
+                            end
+                        end
+                    end
+                    wait(0.1)
+                end
+                Monsa = false
+            end)
         end
     end)
 end
@@ -449,14 +444,10 @@ local function GetClosestt()
             for i, x in pairs(v:GetChildren()) do
                 if x.ClassName == "Folder" then
                     for i, c in pairs(x:GetChildren()) do
-                        if
-                            c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
+                        if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") and
                                 c:FindFirstChildOfClass("Humanoid").Health ~= 0 and
                                 c ~= nil
-                         then
-                            local mag =
-                                (Player.Character.HumanoidRootPart.Position -
-                                c.HumanoidRootPart.Position).magnitude
+                         then local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
                             if mag < TargetDistance then
                                 TargetDistance = mag
                                 Target = c
@@ -476,17 +467,6 @@ local TweenMon = function(A,B,C)
         local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
     end 
 end 
-
-local TweenPlay1 = function(A,B,C)
-    if A and B and C then
-        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 5, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 5, 0))}):Play()
-        wait(1)
-        TweenService:Create(A, TweenInfo.new((B.Position + Vector3.new(0, 5, 100) - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 5, 100))}):Play()
-    
-    end 
-end
-
-
 
 local Script = require(Player.PlayerScripts.Shared.Client.CombatController)
 local ScriptFunction = Script.BasicAttack
@@ -554,15 +534,25 @@ Tab2:AddToggle({
                         end 
                     end
 
+                    local Distance = 1000000
+                    local Monsa = true
                     while true do
                     local closestPlayer = GetClosestt()
-                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid") then
-                    local InfernoWave = game:GetService("Workspace").Ignore.InfernoWave
-                    local SpeedMon = 500
-                    TweenMon(InfernoWave, closestPlayer.HumanoidRootPart, SpeedMon)
+                    local ignoreFolder = game:GetService("Workspace"):FindFirstChild("Ignore")
+                    if ignoreFolder then
+                        local SpeedMon = 500
+                        for _, obj in ipairs(ignoreFolder:GetDescendants()) do
+                            if obj.Name ~= "Medkits" and (obj:IsA("BasePart") or obj:IsA("Model")) then
+                                local targetPart = obj.Position
+                                if (targetPart - closestPlayer.HumanoidRootPart.Position).Magnitude <= Distance then
+                                    TweenMon(obj, closestPlayer.HumanoidRootPart, SpeedMon)
+                                end
+                            end
+                        end
                     end
-                    wait(0.5)
+                    wait(0.1)
                     end
+                    Monsa = false
                end)
             end
         end)
