@@ -221,7 +221,7 @@ local function GetClosestt()
 end
 
 
-local TweenMon99 = function(A,B,C)
+local TweenMon = function(A,B,C)
     if A and B and C then
         local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, -2))}):Play()
     end 
@@ -290,7 +290,7 @@ Tab2:AddToggle({
 
                         local SpeedPla = 50
 
-                        TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+                        TweenMon(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
 
                     end
 
@@ -308,7 +308,7 @@ Tab2:AddToggle({
 
                         local SpeedMon = 500
 
-                        TweenMon(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
+                        TweenMon99(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
 
                     end
 
