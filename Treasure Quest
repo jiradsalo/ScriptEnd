@@ -227,7 +227,7 @@ local TweenMon = function(A,B,C)
     end 
 end 
 
-local TweenPlay1 = function(A,B,C)
+local TweenPlay1999 = function(A,B,C)
     if A and B and C then
         local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, -2))})
         tween1:Play()
@@ -283,7 +283,7 @@ Tab2:AddToggle({
                     end
                     
 		    
-
+while true do
             local function moveToClosest(closestPlayer)
 
                     if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
@@ -295,29 +295,21 @@ Tab2:AddToggle({
                     end
 
                 end
+wait(0.5)
+end
+
+               
 
                 
 
-                while true do
 
-                    local closestPlayer = GetClosestt()
 
-                    if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid", true).Health ~= 0 then
 
-                        local Tornado = game:GetService("Workspace").Ignore.Tornado
 
-                        local SpeedMon = 500
 
-                        TweenMon99(Tornado, closestPlayer.HumanoidRootPart, SpeedMon)
+                
 
-                    end
-
-                    wait(0.5)
-
-                    moveToClosest(closestPlayer)
-
-                end
-
+                
       
 
                end)
