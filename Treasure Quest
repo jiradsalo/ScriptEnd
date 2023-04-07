@@ -69,16 +69,37 @@ Tab1:AddButton({
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Invisicam = true
+local NoClip = false
+
 Tab1:AddToggle({
-    Name = "Invisicam",
+    Name = "No Clip",
     Default = false,
     Callback = function(value)
-        Invisicam = value
-        if Invisicam then
-            Player.DevCameraOcclusionMode = "Invisicam"
+        NoClip = value
+        if NoClip then
+            local character = game.Players.LocalPlayer.Character
+            while NoClip do
+                for i,v in pairs(character:GetDescendants()) do
+                    pcall(function()
+                        if v:IsA("BasePart") then
+                            v.CanCollide = false
+                        end
+                    end)
+                end
+                task.wait()
+                if not NoClip then
+                    break
+                end
+            end
         else
-            Player.DevCameraOcclusionMode = "Zoom"
+            local character = game.Players.LocalPlayer.Character
+            for i,v in pairs(character:GetDescendants()) do
+                pcall(function()
+                    if v:IsA("BasePart") then
+                        v.CanCollide = true
+                    end
+                end)
+            end
         end
     end
 })
@@ -105,20 +126,16 @@ Tab1:AddToggle({
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-
-local OffShake = true
+Invisicam = true
 Tab1:AddToggle({
-    Name = "Off Shake Camera",
+    Name = "Invisicam",
     Default = false,
     Callback = function(value)
-        if OffShake then
-            game:GetService("UserInputService").WindowFocused:connect(function()
-                game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Fixed}):Play()
-            end)
+        Invisicam = value
+        if Invisicam then
+            Player.DevCameraOcclusionMode = "Invisicam"
         else
-            game:GetService("UserInputService").WindowFocused:connect(function()
-                game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Custom}):Play()
-            end)
+            Player.DevCameraOcclusionMode = "Zoom"
         end
     end
 })
