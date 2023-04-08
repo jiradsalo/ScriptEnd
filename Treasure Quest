@@ -26,14 +26,46 @@ local Tab2 = Window:MakeTab({
 --------------------------------------------
 
 --- local All
+ local Get = setmetatable(
+    {},
+    {
+        __index = function(A, B)
+            return game:GetService(B)
+        end
+    }
+)
+
 repeat wait() until game:IsLoaded()
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local TweenService = game:GetService("TweenService")
-local Workspace = game:GetService("Workspace")
-local HttpService = game:GetService("HttpService")
-local Player = game.Players.LocalPlayer
+local ReplicatedStorage = Get.ReplicatedStorage
+local Players = Get.Players
+local RunService = Get.RunService
+local TweenService = Get.TweenService
+local Workspace = Get.Workspace
+local HttpService = Get.HttpService
+local Player = Players.LocalPlayer
+
+
+Player.Idled:connect(function()
+game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+end)
+
+local h = require(ReplicatedStorage.Shared.Modules.DungeonLibrary)
+
+local Settings = {}
+
+local Dungeons = {}
+for i, v in pairs(h.Dungeons) do
+    table.insert(Dungeons, i)
+end
+GameModes = {}
+for i, v in pairs(h.GameModes) do
+    table.insert(GameModes, i)
+end
+Difficulties = {}
+for i, v in pairs(h.Difficulties) do
+    table.insert(Difficulties, i)
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -145,7 +177,7 @@ Tab1:AddToggle({
 local CollectMedkits = true
 
 Tab2:AddToggle({
-    Name = "Collect Medkits",
+    Name = "Collect Medkit",
     Default = false,
     Callback = function(value)
     CollectMedkits = value
@@ -154,11 +186,11 @@ Tab2:AddToggle({
             pcall(function()
                 if CollectMedkits and Player.Character then
                     local humanoid = Player.Character:FindFirstChild("Humanoid")
-                    if humanoid and humanoid.Health < humanoid.MaxHealth * 0.9 then
+                    if humanoid and humanoid.Health < humanoid.MaxHealth * 0.95 then
                         for i,v in pairs(Workspace.Ignore:GetChildren()) do
                             if v.Name == "Medkit" and v:FindFirstChildWhichIsA("TouchTransmitter",true) then
                                 if humanoid.Health < humanoid.MaxHealth then
-                                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true), v, 0)
+                                        firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true), v, 0)
                                     firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true), v, 1)
                                 end
                             end
@@ -202,6 +234,7 @@ Tab2:AddToggle({
 })
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 if game.PlaceId == 2960777560 then
 pcall(function()
 ReplicatedStorage.Lobby.Remotes.ClaimDailyReward:FireServer()
@@ -238,111 +271,92 @@ end
 local TweenMon = function(A,B,C)
     if A and B and C then
         local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
-    end 
-end 
+    end
+end
 
-local TweenPlay1 = function(A,B,C)
+local TweenP1 = function(A,B,C)
     if A and B and C then
-        return TweenService:Create(A,TweenInfo.new((B.Position + Vector3.new(0, 50, 0) - A.Position).magnitude / C, Enum.EasingStyle.Linear),{CFrame = CFrame.new(B.Position + Vector3.new(0, 50, 0))}):Play()
-    end 
-end 
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 50, 20))}):Play()
+    end
+end
 
-local TweenPlay2 = function(A,B,C)
+local TweenP2 = function(A,B,C)
     if A and B and C then
-        return TweenService:Create(A,TweenInfo.new((B.Position + Vector3.new(0,50,100) - A.Position).magnitude / C, Enum.EasingStyle.Linear),{CFrame = CFrame.new(B.Position + Vector3.new(0, 50, 100))}):Play()
-    end 
-end 
+        local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 50, 100))}):Play()
+    end
+end
 
-                
 local Script = require(Player.PlayerScripts.Shared.Client.CombatController)
 local ScriptFunction = Script.BasicAttack
 local ScriptFunction2 = Script.UseAbility
 
 local AutoMobs = true
-local Swim = true
-local PlayerTp = true
 local Monsa = true
 
 Tab2:AddToggle({
     Name = "Auto TP Farm",
     Default = false,
     Callback = function(value)
-        AutoMobs = value
-        Swim = value
-        PlayerTp = value
-        Monsa = value
-                
-        game:GetService("RunService").Stepped:connect(function()
-                pcall(function()
-                if AutoMobs then
-                            ScriptFunction(Script)
-                            ScriptFunction2(Script, GetClosestt().PrimaryPart.Position)
-                        end
-                    end)
-                end)
-            
-            
-                 if Swim then
+            AutoMobs = value
+            Monsa = value
+
+            if AutoMobs then
                     local region = Region3.new(Vector3.new(-999,0,-999), Vector3.new(999,999,999))
                     region = region:ExpandToGrid(4)
                     game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Water)
-                    else
+                    else    
                     local region = Region3.new(Vector3.new(-999,0,-999), Vector3.new(999,999,999))
                     region = region:ExpandToGrid(4)
                     game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Air)
-                    end
+                end
+            
+            if AutoMobs then
+                game:GetService("RunService").Stepped:connect(function()
+                    pcall(function()
+                        if Monsa then
+                        ScriptFunction(Script)
+                        ScriptFunction2(Script, GetClosestt().PrimaryPart.Position)
+                        end
+                    end)
+                end)
                 
-
             spawn(function()
                 while wait() and AutoMobs do
                     pcall(function()
                         ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
                         ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
                         ReplicatedStorage.Dungeon.Remotes.StartWaveDefense:FireServer()
-                        ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
                         
-                        for i,v in pairs(Workspace:GetChildren()) do
-                            if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
-                                firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
-                                firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
-                            end
-                        end
-                        
-                
-                    while PlayerTp do
-                    local function moveToClosest(closestPlayer)
-                        if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid",true).Health ~= 0 then
-                            local SpeedPla = 50
-                            TweenPlay1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
-                        end
-                        wait(3)
-                    end
-                    local closestPlayer = GetClosestt()
-                    moveToClosest(closestPlayer)
 
-                    local function moveToClosest(closestPlayer)
-                        if closestPlayer and closestPlayer:FindFirstChildWhichIsA("Humanoid",true).Health ~= 0 then
-                            local SpeedPla = 50
-                            TweenPlay2(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
-                        end
-                        wait(3)
-                    end
-                    local closestPlayer = GetClosestt()
-                    moveToClosest(closestPlayer)
-                    end
-                
+            ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
+            for i,v in pairs(Workspace:GetChildren()) do
+                if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
+                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
+                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
+                end
+            end
+
+                local SpeedPla = 50
+                local closestPlayer = GetClosestt()
+                local closestHumanoid = closestPlayer:FindFirstChildWhichIsA("Humanoid", true)
+                if closestHumanoid and closestHumanoid.Health > 0 then
+                    TweenP1(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+                    wait(1.5)
+                    TweenP2(Player.Character:FindFirstChild("HumanoidRootPart", true), closestPlayer.HumanoidRootPart, SpeedPla)
+                    wait(1.5)
+                end
 
                     local closestPlayer = nil
-                    local Distance = 1000000
-                
+                    local Distance = 100000000
+                    spawn(function()
                     while Monsa do
                     closestPlayer = GetClosestt()
                         if closestPlayer then
                             local ignoreFolder = game:GetService("Workspace"):FindFirstChild("Ignore")
                             if ignoreFolder then
-                                local SpeedMon = 500
+                                local SpeedMon = 1500
                                 for _, obj in ipairs(ignoreFolder:GetDescendants()) do
-                                    if obj.Name ~= "Medkits" and (obj:IsA("BasePart") or obj:IsA("Model")) then
+                                    if obj.Name ~= "Medkit" and (obj:IsA("BasePart") or obj:IsA("Model")) then
                                         local targetPart = obj.Position
                                         if (targetPart - closestPlayer.HumanoidRootPart.Position).Magnitude <= Distance then
                                             TweenMon(obj, closestPlayer.HumanoidRootPart, SpeedMon)
@@ -352,16 +366,16 @@ Tab2:AddToggle({
                             end
                         end
                         wait(0.1)
-                    end
+                        end
+                    end)
                 end)
             end
         end)
-    
+    end
 end
 })
-
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 local function GetClosestt()
     local TargetDistance = math.huge
@@ -408,41 +422,43 @@ Tab2:AddToggle({
     Callback = function(value)
             AutoMobs = value
             Monsa = value
-            
             if AutoMobs then
+                
                 game:GetService("RunService").Stepped:connect(function()
                     pcall(function()
+                        if Monsa then
                         ScriptFunction(Script)
                         ScriptFunction2(Script, GetClosestt().PrimaryPart.Position)
+                        end
                     end)
                 end)
-
+                
             spawn(function()
                 while wait() and AutoMobs do
                     pcall(function()
                         ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
                         ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
                         ReplicatedStorage.Dungeon.Remotes.StartWaveDefense:FireServer()
-                        ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
                         
-                        for i,v in pairs(Workspace:GetChildren()) do
-                            if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
-                                firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
-                                firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
-                            end
-                        end
 
+            ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
+            for i,v in pairs(Workspace:GetChildren()) do
+                if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
+                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
+                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
+                end
+            end
                     local closestPlayer = nil
-                    local Distance = 10000000000
-                spawn(function()
+                    local Distance = 100000000
+                    spawn(function()
                     while Monsa do
                     closestPlayer = GetClosestt()
                         if closestPlayer then
                             local ignoreFolder = game:GetService("Workspace"):FindFirstChild("Ignore")
                             if ignoreFolder then
-                                local SpeedMon = 1000
+                                local SpeedMon = 1500
                                 for _, obj in ipairs(ignoreFolder:GetDescendants()) do
-                                    if obj.Name ~= "Medkits" and (obj:IsA("BasePart") or obj:IsA("Model")) then
+                                    if obj.Name ~= "Medkit" and (obj:IsA("BasePart") or obj:IsA("Model")) then
                                         local targetPart = obj.Position
                                         if (targetPart - closestPlayer.HumanoidRootPart.Position).Magnitude <= Distance then
                                             TweenMon(obj, closestPlayer.HumanoidRootPart, SpeedMon)
@@ -451,9 +467,9 @@ Tab2:AddToggle({
                                 end
                             end
                         end
-                        wait(1)
-                    end
-                end)
+                        wait(0.1)
+                        end
+                    end)
                 end)
             end
         end)
@@ -555,26 +571,27 @@ Tab2:AddToggle({
                         ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
                         ReplicatedStorage.Dungeon.Remotes.StartDungeon:FireServer()
                         ReplicatedStorage.Dungeon.Remotes.StartWaveDefense:FireServer()
-                        ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
                         
-                        for i,v in pairs(Workspace:GetChildren()) do
-                            if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
-                                firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
-                                firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
-                            end
-                        end
+
+            ReplicatedStorage.Shared.Remotes.Data.ClaimPrizes:FireServer()
+            for i,v in pairs(Workspace:GetChildren()) do
+                if v:FindFirstChild("FinishRoom",true)and v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true) then
+                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),0)
+                    firetouchinterest(Player.Character:FindFirstChild("HumanoidRootPart",true),v:FindFirstChild("FinishRoom",true):FindFirstChild("Hitbox",true):FindFirstChild("Part",true),1)
+                end
+            end
 
                     local closestPlayer = nil
-                    local Distance = 10000000000
+                    local Distance = 100000000
                 spawn(function()
                     while Monsa do
                     closestPlayer = GetClosestt()
                         if closestPlayer then
                             local ignoreFolder = game:GetService("Workspace"):FindFirstChild("Ignore")
                             if ignoreFolder then
-                                local SpeedMon = 1000
+                                local SpeedMon = 1500
                                 for _, obj in ipairs(ignoreFolder:GetDescendants()) do
-                                    if obj.Name ~= "Medkits" and (obj:IsA("BasePart") or obj:IsA("Model")) then
+                                    if obj.Name ~= "Medkit" and (obj:IsA("BasePart") or obj:IsA("Model")) then
                                         local targetPart = obj.Position
                                         if (targetPart - closestPlayer.HumanoidRootPart.Position).Magnitude <= Distance then
                                             TweenMon(obj, closestPlayer.HumanoidRootPart, SpeedMon)
@@ -594,7 +611,6 @@ end
 })
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 
 OrionLib:Init()
