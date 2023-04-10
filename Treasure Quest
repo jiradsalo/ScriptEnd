@@ -172,6 +172,34 @@ Tab1:AddToggle({
     end
 })
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+WalkAir = false
+
+Tab1:AddToggle({
+    Name = "WalkAir",
+    Default = false,
+    Callback = function(value)
+        WalkAir = value
+
+        local air = Instance.new("Part", workspace)
+        air.Size = Vector3.new(7, 2, 3)
+        air.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+        air.Transparency = 1
+        air.Anchored = true
+        air.Name = "Airwalk"
+
+        if WalkAir then
+            while WalkAir do
+                air.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+                wait(0.1)
+            end
+        end
+
+        air:Destroy()
+    end
+})
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 local CollectMedkits = true
@@ -242,23 +270,21 @@ ReplicatedStorage.Lobby.Remotes.ClaimTreasureReward:FireServer()
 end)
 end
 
-local function GetClosest()
+local function GetClosestt()
     local TargetDistance = math.huge
-    local Targets = {}
-        for i, v in pairs(Workspace:GetChildren()) do
-            if v.ClassName == "Folder" then
-                for i, x in pairs(v:GetChildren()) do
-                    if x.ClassName == "Folder" then
-                        for i, c in pairs(x:GetChildren()) do
-                            if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") then
+    local Target = nil
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v.ClassName == "Folder" then
+            for i, x in pairs(v:GetChildren()) do
+                if x.ClassName == "Folder" then
+                    for i, c in pairs(x:GetChildren()) do
+                        if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") then
                             local humanoid = c:FindFirstChildOfClass("Humanoid")
-                            local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
-                                if mag <= TargetDistance then
+                            if humanoid and humanoid.Health ~= 0 then
+                                local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
                                 if mag < TargetDistance then
-                                    Targets = {}
                                     TargetDistance = mag
-                                end
-                                    table.insert(Targets, c)
+                                    Target = c
                                 end
                             end
                         end
@@ -266,7 +292,8 @@ local function GetClosest()
                 end
             end
         end
-    return Targets
+    end
+    return Target
 end
 
 local TweenMon = function(A,B,C)
@@ -378,24 +405,21 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-local function GetClosest()
+local function GetClosestt()
     local TargetDistance = math.huge
-    local Targets = {}
-        for i, v in pairs(Workspace:GetChildren()) do
-            if v.ClassName == "Folder" then
-                for i, x in pairs(v:GetChildren()) do
-                    if x.ClassName == "Folder" then
-                        for i, c in pairs(x:GetChildren()) do
-                            if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") then
+    local Target = nil
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v.ClassName == "Folder" then
+            for i, x in pairs(v:GetChildren()) do
+                if x.ClassName == "Folder" then
+                    for i, c in pairs(x:GetChildren()) do
+                        if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") then
                             local humanoid = c:FindFirstChildOfClass("Humanoid")
-                            local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
-                                if mag <= TargetDistance then
+                            if humanoid and humanoid.Health ~= 0 then
+                                local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
                                 if mag < TargetDistance then
-                                    Targets = {}
                                     TargetDistance = mag
-                                end
-                                    table.insert(Targets, c)
+                                    Target = c
                                 end
                             end
                         end
@@ -403,11 +427,11 @@ local function GetClosest()
                 end
             end
         end
-    return Targets
+    end
+    return Target
 end
 
-
-local TweenMon = function(A,B,C)
+local TweenMon = function(A, B, C)
     if A and B and C then
         local tween1 = TweenService:Create(A, TweenInfo.new((B.Position - A.Position).magnitude / C, Enum.EasingStyle.Linear), {CFrame = CFrame.new(B.Position + Vector3.new(0, 0, 0))}):Play()
     end 
@@ -482,25 +506,24 @@ end
 })
 
 
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-local function GetClosest()
+local function GetClosestt()
     local TargetDistance = math.huge
-    local Targets = {}
-        for i, v in pairs(Workspace:GetChildren()) do
-            if v.ClassName == "Folder" then
-                for i, x in pairs(v:GetChildren()) do
-                    if x.ClassName == "Folder" then
-                        for i, c in pairs(x:GetChildren()) do
-                            if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") then
+    local Target = nil
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v.ClassName == "Folder" then
+            for i, x in pairs(v:GetChildren()) do
+                if x.ClassName == "Folder" then
+                    for i, c in pairs(x:GetChildren()) do
+                        if c.ClassName == "Model" and c:FindFirstChild("EvilHumanoid") then
                             local humanoid = c:FindFirstChildOfClass("Humanoid")
-                            local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
-                                if mag <= TargetDistance then
+                            if humanoid and humanoid.Health ~= 0 then
+                                local mag = (Player.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).magnitude
                                 if mag < TargetDistance then
-                                    Targets = {}
                                     TargetDistance = mag
-                                end
-                                    table.insert(Targets, c)
+                                    Target = c
                                 end
                             end
                         end
@@ -508,7 +531,8 @@ local function GetClosest()
                 end
             end
         end
-    return Targets
+    end
+    return Target
 end
 
 local TweenMon = function(A,B,C)
@@ -541,20 +565,20 @@ Tab2:AddToggle({
         spawn(function()
             while TPL do
                 if TPL then
-                    local distance = (CFrame.new(-235.4567413330078, 516.4963989257812, 1054.8560791015625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    local distance = (CFrame.new(-1917.8970947265625, 1569.3265380859375, -2337.17822265625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                     local speed = 50
                     local time = distance / speed
                     local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
-                        {CFrame = CFrame.new(-235.4567413330078, 516.4963989257812, 1054.8560791015625)})
+                        {CFrame = CFrame.new(-1917.8970947265625, 1569.3265380859375, -2337.17822265625)})
                     Tw:Play()
                     wait(4)
                     wait(0.5)
                     
-                    local distance = (CFrame.new(-70.50364685058594, 543.898681640625, 1151.0472412109375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    local distance = (CFrame.new(-1790.54736328125, 1566.655029296875, -2448.508544921875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                     local speed = 50
                     local time = distance / speed
                     local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
-                        {CFrame = CFrame.new(-70.50364685058594, 543.898681640625, 1151.0472412109375)})
+                        {CFrame = CFrame.new(-1790.54736328125, 1566.655029296875, -2448.508544921875)})
                     Tw:Play()
                     wait(4)
                     wait(0.5)
