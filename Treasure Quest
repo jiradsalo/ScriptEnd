@@ -200,6 +200,79 @@ Tab1:AddToggle({
     end
 })
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+FullBright = true
+
+Tab1:AddToggle({
+    Name = "FullBright",
+    Default = false,
+    Callback = function(value)
+        FullBright = value
+        
+        _G.FullBrightEnabled = FullBright
+        
+    if not _G.FullBrightExecuted then
+
+	_G.FullBrightEnabled = false
+
+	_G.NormalLightingSettings = {
+		Brightness = game:GetService("Lighting").Brightness,
+		ClockTime = game:GetService("Lighting").ClockTime,
+	}
+
+	game:GetService("Lighting"):GetPropertyChangedSignal("Brightness"):Connect(function()
+		if game:GetService("Lighting").Brightness ~= 1 and game:GetService("Lighting").Brightness ~= _G.NormalLightingSettings.Brightness then
+			_G.NormalLightingSettings.Brightness = game:GetService("Lighting").Brightness
+			if not _G.FullBrightEnabled then
+				repeat
+					wait()
+				until _G.FullBrightEnabled
+			end
+			game:GetService("Lighting").Brightness = 1
+		end
+	end)
+
+	game:GetService("Lighting"):GetPropertyChangedSignal("ClockTime"):Connect(function()
+		if game:GetService("Lighting").ClockTime ~= 12 and game:GetService("Lighting").ClockTime ~= _G.NormalLightingSettings.ClockTime then
+			_G.NormalLightingSettings.ClockTime = game:GetService("Lighting").ClockTime
+			if not _G.FullBrightEnabled then
+				repeat
+					wait()
+				until _G.FullBrightEnabled
+			end
+			game:GetService("Lighting").ClockTime = 12
+		end
+	end)
+
+
+	game:GetService("Lighting").Brightness = 1
+	game:GetService("Lighting").ClockTime = 12
+
+	local LatestValue = true
+	spawn(function()
+		repeat
+			wait()
+		until _G.FullBrightEnabled
+		while wait() do
+			if _G.FullBrightEnabled ~= LatestValue then
+				if not _G.FullBrightEnabled then
+					game:GetService("Lighting").Brightness = _G.NormalLightingSettings.Brightness
+					game:GetService("Lighting").ClockTime = _G.NormalLightingSettings.ClockTime
+
+				else
+					game:GetService("Lighting").Brightness = 1
+					game:GetService("Lighting").ClockTime = 12
+				end
+				LatestValue = not LatestValue
+			end
+		end
+	end)
+end
+_G.FullBrightExecuted = true
+
+    end
+})
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 local CollectMedkits = true
@@ -565,20 +638,20 @@ Tab2:AddToggle({
         spawn(function()
             while TPL do
                 if TPL then
-                    local distance = (CFrame.new(-1917.8970947265625, 1569.3265380859375, -2337.17822265625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    local distance = (CFrame.new(-1331.7265625, 1360.235107421875, -1266.052978515625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                     local speed = 50
                     local time = distance / speed
                     local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
-                        {CFrame = CFrame.new(-1917.8970947265625, 1569.3265380859375, -2337.17822265625)})
+                        {CFrame = CFrame.new(-1331.7265625, 1360.235107421875, -1266.052978515625)})
                     Tw:Play()
                     wait(4)
                     wait(0.5)
                     
-                    local distance = (CFrame.new(-1790.54736328125, 1566.655029296875, -2448.508544921875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    local distance = (CFrame.new(-70.50364685058594, 543.898681640625, 1151.0472412109375).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                     local speed = 50
                     local time = distance / speed
                     local Tw = tweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
-                        {CFrame = CFrame.new(-1790.54736328125, 1566.655029296875, -2448.508544921875)})
+                        {CFrame = CFrame.new(-70.50364685058594, 543.898681640625, 1151.0472412109375)})
                     Tw:Play()
                     wait(4)
                     wait(0.5)
